@@ -58,5 +58,15 @@
     "source": "#",
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
+  },
+  { 
+    "id": 7,
+    "title": "ESCR BSIT Lanyard",
+    "description": "A lanyard design for a school, developed with emphasis on simplicity, readability, and representing the identity and values of the group.",
+    "thumbnail": "./assets/works-thumbnails/escr-bsit-lanyard-thumbnail.png",
+    "website": "#",
+    "source": "#",
+    "category": ["graphic design"],
+    "technologies": ["Photoshop"]
   }
 ]
