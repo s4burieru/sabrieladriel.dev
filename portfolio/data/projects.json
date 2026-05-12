@@ -26,6 +26,8 @@
     "thumbnail": "./assets/works-thumbnails/gadgetspot-thumbnail.png",
     "website": "#",
     "source": "#",
+    "figmaLink": "#",
+    "behanceLink": "#",
     "category": ["graphic design", "uiux design"],
     "technologies": ["Figma", "Photoshop"]
   },
@@ -46,6 +48,7 @@
     "thumbnail": "./assets/works-thumbnails/pililla-parish-thumbnail.jpg",
     "website": "#",
     "source": "#",
+    "behanceLink": "#",
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
   },
@@ -56,6 +59,7 @@
     "thumbnail": "./assets/works-thumbnails/bsp-unit-thumbnail.jpg",
     "website": "#",
     "source": "#",
+    "behanceLink": "#",
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
   },
@@ -66,6 +70,7 @@
     "thumbnail": "./assets/works-thumbnails/escr-bsit-lanyard-thumbnail.png",
     "website": "#",
     "source": "#",
+    "behanceLink": "#",
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
   }
