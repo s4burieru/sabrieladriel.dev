@@ -1,26 +1,36 @@
 [
   {
     "id": 1,
-    "title": "Esports Executive Information System",
-    "description": "A comprehensive management system for esports organizations, enabling efficient tracking, scheduling, and administration of teams and events.",
-    "thumbnail": "./assets/works-thumbnails/esports-eis-thumbnail.png",
-    "website": "#",
-    "source": "#",
-    "category": ["desktop app development"],
-    "technologies": ["VB.NET", "GunaUI", "MS Access", "Visual Studio"]
+    "title": "BetterTanay.org",
+    "description": "A community-run web portal designed to share local information, featuring a clean interface, user-friendly navigation, and accessibility across devices.",
+    "thumbnail": "./assets/works-thumbnails/bettertanay.org-thumbnail.png",
+    "website": "https://bettertanay.org",
+    "source": "https://github.com/s4burieru/bettertanay",
+    "category": ["web development"],
+    "technologies": ["React", "TypeScript", "Tailwind", "VS Code"]
   },
   {
     "id": 2,
     "title": "ESCR GWA Calculator",
     "description": "A grade tracking and GWA calculation tool that helps students monitor their academic performance and plan for their target grades.",
     "thumbnail": "./assets/works-thumbnails/gwa-calcu-thumbnail.png",
-    "website": "#",
-    "source": "#",
+    "website": "https://s4burieru.github.io/gwa-calculator/",
+    "source": "https://github.com/s4burieru/gwa-calculator",
     "category": ["web development"],
     "technologies": ["HTML", "CSS", "JavaScript", "VS Code"]
   },
   {
     "id": 3,
+    "title": "Esports Executive Information System",
+    "description": "A comprehensive management system for esports organizations, enabling efficient tracking, scheduling, and administration of teams and events.",
+    "thumbnail": "./assets/works-thumbnails/esports-eis-thumbnail.png",
+    "website": "#",
+    "source": "https://github.com/s4burieru/esports-executive-information-system",
+    "category": ["desktop app development"],
+    "technologies": ["VB.NET", "GunaUI", "MS Access", "Visual Studio"]
+  },
+  {
+    "id": 4,
     "title": "GadgetSpot Ecommerce",
     "description": "A comprehensive UI/UX design prototype for an e-commerce gadget platform, including design mockups and promotional materials.",
     "thumbnail": "./assets/works-thumbnails/gadgetspot-thumbnail.png",
@@ -30,16 +40,6 @@
     "behanceLink": "#",
     "category": ["graphic design", "uiux design"],
     "technologies": ["Figma", "Photoshop"]
-  },
-  {
-    "id": 4,
-    "title": "BetterTanay.org",
-    "description": "A community-run web portal designed to share local information, featuring a clean interface, user-friendly navigation, and accessibility across devices.",
-    "thumbnail": "./assets/works-thumbnails/bettertanay.org-thumbnail.png",
-    "website": "#",
-    "source": "#",
-    "category": ["web development"],
-    "technologies": ["React", "TypeScript", "Tailwind", "VS Code"]
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
   },
-  { 
+  {
     "id": 6,
     "title": "BSP Unit No. 759 Jersey",
     "description": "A unit jersey design for a school, developed with emphasis on simplicity, readability, and representing the identity and values of the group.",
@@ -63,7 +63,7 @@
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
   },
-  { 
+  {
     "id": 7,
     "title": "ESCR BSIT Lanyard",
     "description": "A lanyard design for a school, developed with emphasis on simplicity, readability, and representing the identity and values of the group.",
