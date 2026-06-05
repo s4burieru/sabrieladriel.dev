@@ -36,8 +36,8 @@
     "thumbnail": "./assets/works-thumbnails/gadgetspot-thumbnail.png",
     "website": "#",
     "source": "#",
-    "figmaLink": "#",
-    "behanceLink": "#",
+    "figmaLink": "https://www.figma.com/design/PTG44gpGt8bYhAvoUks8b1/GadgetSpot-Ecommerce-Website?node-id=0-1&t=pZSti39lDdrLf9SV-1",
+    "behanceLink": "https://www.behance.net/gallery/248938483/GadgetSpot-Social-Media-Graphics",
     "category": ["graphic design", "uiux design"],
     "technologies": ["Figma", "Photoshop"]
   },
@@ -48,7 +48,7 @@
     "thumbnail": "./assets/works-thumbnails/pililla-parish-thumbnail.jpg",
     "website": "#",
     "source": "#",
-    "behanceLink": "#",
+    "behanceLink": "https://www.behance.net/gallery/228510871/Pililla-Parish-Jersey-Free-Logo",
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
   },
@@ -59,7 +59,7 @@
     "thumbnail": "./assets/works-thumbnails/bsp-unit-thumbnail.jpg",
     "website": "#",
     "source": "#",
-    "behanceLink": "#",
+    "behanceLink": "https://www.behance.net/gallery/228510369/TWINHS-BSP-Jersey",
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
   },
@@ -70,7 +70,7 @@
     "thumbnail": "./assets/works-thumbnails/escr-bsit-lanyard-thumbnail.png",
     "website": "#",
     "source": "#",
-    "behanceLink": "#",
+    "behanceLink": "https://www.behance.net/gallery/228509541/ESCR-BSIT-Lanyard",
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
   }
