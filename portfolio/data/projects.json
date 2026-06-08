@@ -73,5 +73,15 @@
     "behanceLink": "https://www.behance.net/gallery/228509541/ESCR-BSIT-Lanyard",
     "category": ["graphic design"],
     "technologies": ["Photoshop"]
+  },
+  {
+    "id": 8,
+    "title": "Scouting Formal Invitaion Video",
+    "description": "A lanyard design for a school, developed with emphasis on simplicity, readability, and representing the identity and values of the group.",
+    "thumbnail": "./assets/works-thumbnails/bsp-invitation-thumbnail.png",
+    "website": "#",
+    "source": "https://drive.google.com/file/d/1c6rKiEzNmkRtZdIBIoPdqSLbH_B5eVr2/view?usp=drive_link",
+    "category": ["video editing"],
+    "technologies": ["CapCut"]
   }
 ]
