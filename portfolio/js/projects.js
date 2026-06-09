@@ -51,8 +51,8 @@ function renderProjectsHTML(projects) {
         
         <!-- Project Link Buttons -->
         <div class="absolute top-3 sm:top-4 right-3 sm:right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition duration-300 flex-wrap">
-          ${project.website !== '#' ? `<a href="${project.website}" class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-black rounded-lg font-semibold text-xs sm:text-sm hover:bg-gray-100 transition" title="View Website">View website</a>` : ''}
-          ${project.source !== '#' ? `<a href="${project.source}" class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/20 border border-white text-white rounded-lg font-semibold text-xs sm:text-sm hover:bg-white/30 transition" title="View Source">View source</a>` : ''}
+          ${project.website !== '#' ? `<a href="${project.website}" class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-black rounded-lg font-semibold text-xs sm:text-sm hover:bg-gray-100 transition" title="View Website">View Website</a>` : ''}
+          ${project.source !== '#' ? `<a href="${project.source}" class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/20 border border-white text-white rounded-lg font-semibold text-xs sm:text-sm hover:bg-white/30 transition" title="View Source"><img src="./assets/icons/external-link.svg" alt="Source" class="w-4 h-4 inline-block align-middle" /></a>` : ''}
           ${project.figmaLink && project.figmaLink !== '#' ? `<a href="${project.figmaLink}" class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/20 border border-white text-white rounded-lg font-semibold text-xs sm:text-sm hover:bg-white/30 transition" title="View Figma">Figma</a>` : ''}
           ${project.behanceLink && project.behanceLink !== '#' ? `<a href="${project.behanceLink}" class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/20 border border-white text-white rounded-lg font-semibold text-xs sm:text-sm hover:bg-white/30 transition" title="View Behance">Behance</a>` : ''}
         </div>
@@ -133,4 +133,3 @@ document.addEventListener('DOMContentLoaded', function() {
     renderAllProjects();
   }
 });
-
