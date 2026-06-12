@@ -192,6 +192,11 @@ function initScrollAnimations() {
       return;
     }
 
+    // Skip section header "View All" and "More About Me" links
+    if (card.tagName === 'A' && (card.innerText.includes('View All') || card.innerText.includes('More About Me'))) {
+      return;
+    }
+
     // Skip navbar logo
     if (card.closest('#main-navbar')) {
       return;
