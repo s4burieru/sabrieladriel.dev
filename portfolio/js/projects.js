@@ -47,14 +47,14 @@ function renderProjectsHTML(projects) {
           alt="${project.title}" 
           class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
         />
-        <div class="absolute inset-0"></div>
+        <div class="absolute inset-0 group-hover:bg-black/50 transition duration-300"></div>
         
         <!-- Project Link Buttons -->
         <div class="absolute top-3 sm:top-4 right-3 sm:right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition duration-300 flex-wrap">
-          ${project.website !== '#' ? `<a href="${project.website}" class="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center bg-white text-black rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-100 transition" title="View Website"><img src="./assets/icons/web.svg" alt="Source" class="w-6 h-6 " /></a>` : ''}
-          ${project.source !== '#' ? `<a href="${project.source}" class="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center bg-white/20 border border-white text-white rounded-full font-semibold text-xs sm:text-sm hover:bg-white/30 transition" title="View Source"><img src="./assets/icons/external-link.svg" alt="Source" class="w-5 h-5" /></a>` : ''}
-          ${project.figmaLink && project.figmaLink !== '#' ? `<a href="${project.figmaLink}" class="px-4 sm:px-5 py-2 sm:py-2.5 flex items-center justify-center bg-white/20 border border-white text-white rounded-full font-semibold text-xs sm:text-sm hover:bg-white/30 transition" title="View Figma">Figma</a>` : ''}
-          ${project.behanceLink && project.behanceLink !== '#' ? `<a href="${project.behanceLink}" class="px-4 sm:px-5 py-2 sm:py-2.5 flex items-center justify-center bg-white/20 border border-white text-white rounded-full font-semibold text-xs sm:text-sm hover:bg-white/30 transition" title="View Behance">Behance</a>` : ''}
+          ${project.website !== '#' ? `<a href="${project.website}" class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-white text-black rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-100 transition shadow-lg" title="View Website"><img src="./assets/icons/web.svg" alt="Website" class="w-6 h-6 brightness-0" /></a>` : ''}
+          ${project.source !== '#' ? `<a href="${project.source}" class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-white text-black rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-100 transition shadow-lg" title="View Source"><img src="./assets/icons/external-link.svg" alt="Source" class="w-5 h-5 brightness-0" /></a>` : ''}
+          ${project.figmaLink && project.figmaLink !== '#' ? `<a href="${project.figmaLink}" class="px-5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-center bg-white text-black rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-100 transition shadow-lg" title="View Figma">Figma</a>` : ''}
+          ${project.behanceLink && project.behanceLink !== '#' ? `<a href="${project.behanceLink}" class="px-5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-center bg-white text-black rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-100 transition shadow-lg" title="View Behance">Behance</a>` : ''}
         </div>
       </div>
       
