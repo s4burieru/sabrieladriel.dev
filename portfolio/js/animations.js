@@ -202,6 +202,11 @@ function initScrollAnimations() {
       return;
     }
 
+    // Skip "View Details" buttons in services
+    if (card.tagName === 'A' && card.href && card.href.includes('services.html?service=')) {
+      return;
+    }
+
     // Add scroll animation
     gsap.from(card, {
       scrollTrigger: {
