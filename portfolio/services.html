@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/output.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -14,13 +17,17 @@
 
   <body
     class="text-white relative font-poppins"
-    style="background-color: #0a0a0a; min-height: 100vh; overflow-x: hidden;"
+    style="background-color: #0a0a0a; min-height: 100vh; overflow-x: hidden"
   >
     <!-- Dark Horizon Glow -->
     <div
       class="fixed inset-0 z-10 pointer-events-none"
       style="
-        background: radial-gradient(125% 125% at 50% 10%, #00000000 40%, #0d1a36 100%);
+        background: radial-gradient(
+          125% 125% at 50% 10%,
+          #00000000 40%,
+          #0d1a36 100%
+        );
       "
     ></div>
 
@@ -29,7 +36,11 @@
       class="fixed inset-0 z-5 pointer-events-none"
       style="
         background: #000000;
-        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px);
+        background-image: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 1.5px,
+          transparent 1.5px
+        );
         background-size: 30px 30px;
         background-position: 0 0;
       "
@@ -42,126 +53,307 @@
 
       <!-- Hero Section -->
       <section
-        id="hero"
+        id="services-hero"
         class="flex items-center justify-center px-6 sm:px-6 md:px-8 pt-36 md:pt-44 pb-16 md:pb-24"
       >
         <div class="max-w-6xl w-full text-center">
-          <h1 
+          <h1
+            id="hero-title"
             class="font-bold mb-6"
-            style="font-size: clamp(32px, 6vw, 52px);"
+            style="font-size: clamp(32px, 6vw, 52px)"
           >
             What I Do
           </h1>
-          <p class="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Delivering high-quality digital solutions tailored to your needs. 
+          <p
+            id="hero-desc"
+            class="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+          >
+            Delivering high-quality digital solutions tailored to your needs.
             Explore the services I offer to help your projects succeed.
           </p>
         </div>
       </section>
 
+      <!-- Dynamic Service Detail Section (Hidden by default) -->
+      <section
+        id="service-detail"
+        class="px-6 sm:px-6 md:px-8 pb-24 hidden justify-center"
+      >
+        <div class="w-full max-w-4xl">
+          <a
+            href="services.html"
+            class="text-blue-500 hover:text-blue-400 transition mb-12 inline-flex items-center gap-2 group"
+          >
+            <span class="group-hover:-translate-x-1 transition-transform"
+              >←</span
+            >
+            Back to All Services
+          </a>
+          <div id="detail-content" class="space-y-12">
+            <!-- Content populated by JS -->
+          </div>
+        </div>
+      </section>
+
       <!-- Detailed Services Grid -->
-      <section id="detailed-services" class="px-6 sm:px-6 md:px-8 pb-24 flex justify-center">
+      <section
+        id="detailed-services"
+        class="px-6 sm:px-6 md:px-8 pb-24 flex justify-center"
+      >
         <div class="w-full max-w-6xl">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            
             <!-- Website Development -->
-            <div class="group p-8 sm:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-lg">
-              <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold text-blue-500">
+            <div
+              class="group flex flex-col p-8 sm:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-lg"
+            >
+              <div
+                class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold text-blue-500"
+              >
                 01
               </div>
-              <h2 class="text-2xl sm:text-3xl font-bold mb-4">Website Development</h2>
-              <p class="text-gray-400 leading-relaxed mb-8">
-                I build fast, responsive, and SEO-friendly websites using modern tools and frameworks. 
-                Whether it's a landing page or a complex web app, I ensure a seamless experience.
+              <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+                Website Development
+              </h2>
+              <p class="text-gray-400 leading-relaxed mb-8 flex-1">
+                I build fast, responsive, and SEO-friendly websites using modern
+                tools and frameworks. Whether it's a landing page or a complex
+                web app, I ensure a seamless experience.
               </p>
-              <ul class="space-y-3 text-sm text-gray-500">
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Responsive Web Design</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Performance Optimization</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Modern UI Frameworks</li>
+              <ul class="space-y-3 text-sm text-gray-500 mb-8">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Responsive Web Design
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Performance Optimization
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Modern UI Frameworks
+                </li>
               </ul>
+              <a
+                href="services.html?service=web-dev"
+                class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600/10 border border-blue-500/20 text-blue-500 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+              >
+                View Details
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
             </div>
 
             <!-- Multimedia Design -->
-            <div class="group p-8 sm:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-lg">
-              <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold text-blue-500">
+            <div
+              class="group flex flex-col p-8 sm:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-lg"
+            >
+              <div
+                class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold text-blue-500"
+              >
                 02
               </div>
-              <h2 class="text-2xl sm:text-3xl font-bold mb-4">Multimedia Design</h2>
-              <p class="text-gray-400 leading-relaxed mb-8">
-                Creating impactful visual identities and user interfaces that resonate with your audience. 
-                I blend creativity with functionality to deliver designs that work.
+              <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+                Multimedia Design
+              </h2>
+              <p class="text-gray-400 leading-relaxed mb-8 flex-1">
+                Creating impactful visual identities and user interfaces that
+                resonate with your audience. I blend creativity with
+                functionality to deliver designs that work.
               </p>
-              <ul class="space-y-3 text-sm text-gray-500">
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> UI/UX Design Prototyping</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Graphic & Branding Design</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Social Media Visuals</li>
+              <ul class="space-y-3 text-sm text-gray-500 mb-8">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  UI/UX Design Prototyping
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Graphic & Branding Design
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Social Media Visuals
+                </li>
               </ul>
+              <a
+                href="services.html?service=multimedia"
+                class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600/10 border border-blue-500/20 text-blue-500 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+              >
+                View Details
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
             </div>
 
             <!-- Video Editing -->
-            <div class="group p-8 sm:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-lg">
-              <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold text-blue-500">
+            <div
+              class="group flex flex-col p-8 sm:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-lg"
+            >
+              <div
+                class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold text-blue-500"
+              >
                 03
               </div>
               <h2 class="text-2xl sm:text-3xl font-bold mb-4">Video Editing</h2>
-              <p class="text-gray-400 leading-relaxed mb-8">
-                Transforming raw footage into engaging stories. I handle everything from basic cuts to 
-                advanced transitions, color grading, and sound synchronization.
+              <p class="text-gray-400 leading-relaxed mb-8 flex-1">
+                Transforming raw footage into engaging stories. I handle
+                everything from basic cuts to advanced transitions, color
+                grading, and sound synchronization.
               </p>
-              <ul class="space-y-3 text-sm text-gray-500">
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Content Creation Editing</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Color Correction & Grading</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Motion Graphics & Text</li>
+              <ul class="space-y-3 text-sm text-gray-500 mb-8">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Content Creation Editing
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Color Correction & Grading
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Motion Graphics & Text
+                </li>
               </ul>
+              <a
+                href="services.html?service=video-editing"
+                class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600/10 border border-blue-500/20 text-blue-500 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+              >
+                View Details
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
             </div>
 
             <!-- OSINT Investigation -->
-            <div class="group p-8 sm:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-lg">
-              <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold text-blue-500">
+            <div
+              class="group flex flex-col p-8 sm:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-lg"
+            >
+              <div
+                class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold text-blue-500"
+              >
                 04
               </div>
-              <h2 class="text-2xl sm:text-3xl font-bold mb-4">OSINT Investigation</h2>
-              <p class="text-gray-400 leading-relaxed mb-8">
-                Conducting thorough research using publicly available information to provide valuable insights 
-                for fact-checking, due diligence, and risk assessment.
+              <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+                OSINT Investigation
+              </h2>
+              <p class="text-gray-400 leading-relaxed mb-8 flex-1">
+                Conducting thorough research using publicly available
+                information to provide valuable insights for fact-checking, due
+                diligence, and risk assessment.
               </p>
-              <ul class="space-y-3 text-sm text-gray-500">
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Intelligence Gathering</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Fact-Checking & Verification</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Digital Footprint Analysis</li>
+              <ul class="space-y-3 text-sm text-gray-500 mb-8">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Intelligence Gathering
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Fact-Checking & Verification
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  Digital Footprint Analysis
+                </li>
               </ul>
+              <a
+                href="services.html?service=osint"
+                class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600/10 border border-blue-500/20 text-blue-500 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+              >
+                View Details
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
             </div>
-
           </div>
         </div>
       </section>
 
       <!-- Simple Why Me Section -->
-      <section class="py-16 md:py-24 px-6 sm:px-6 md:px-8 flex justify-center bg-white/[0.02] border-y border-white/10">
+      <section
+        id="why-me-section"
+        class="py-16 md:py-24 px-6 sm:px-6 md:px-8 flex justify-center bg-white/2 border-y border-white/10"
+      >
         <div class="max-w-4xl w-full text-center">
           <h2 class="text-3xl font-bold mb-12">Why Work With Me?</h2>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
             <div>
               <h3 class="font-bold mb-2">Multidisciplinary</h3>
-              <p class="text-gray-400 text-sm">Skills across dev, design, and analysis allow for a well-rounded approach.</p>
+              <p class="text-gray-400 text-sm">
+                Skills across dev, design, and analysis allow for a well-rounded
+                approach.
+              </p>
             </div>
             <div>
               <h3 class="font-bold mb-2">Client-Focused</h3>
-              <p class="text-gray-400 text-sm">Your goals are the priority. I ensure every project meets your specific needs.</p>
+              <p class="text-gray-400 text-sm">
+                Your goals are the priority. I ensure every project meets your
+                specific needs.
+              </p>
             </div>
             <div>
               <h3 class="font-bold mb-2">Constant Learner</h3>
-              <p class="text-gray-400 text-sm">Staying updated with the latest trends and technologies to provide modern solutions.</p>
+              <p class="text-gray-400 text-sm">
+                Staying updated with the latest trends and technologies to
+                provide modern solutions.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Call to Action -->
-      <section class="py-24 px-6 flex justify-center">
+      <section id="cta-section" class="py-24 px-6 flex justify-center">
         <div class="max-w-2xl text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-8">Have a project in mind?</h2>
-          <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition shadow-lg">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8">
+            Have a project in mind?
+          </h2>
+          <a
+            href="contact.html"
+            class="inline-flex items-center px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition shadow-lg"
+          >
             Start a Conversation
           </a>
         </div>
@@ -173,5 +365,6 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/animations.js"></script>
+    <script src="./js/services.js"></script>
   </body>
 </html>
