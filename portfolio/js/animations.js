@@ -187,6 +187,11 @@ function initScrollAnimations() {
   const allCards = document.querySelectorAll(cardSelectors.join(', '));
   
   allCards.forEach(card => {
+    // Keep the services section static; only the rest of the site gets hover lift.
+    if (card.closest('#detailed-services')) {
+      return;
+    }
+
     // Skip certificate cards (they're nested in the carousel)
     if (card.closest('#certifications')) {
       return;
