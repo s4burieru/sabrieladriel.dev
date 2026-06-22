@@ -241,6 +241,10 @@ const deletingSpeed = 50;
 const pauseBetweenRoles = 1500;
 
 function type() {
+  if (!roleTextElement) {
+    return;
+  }
+
   const currentRole = roles[currentRoleIndex];
 
   if (isDeleting) {
