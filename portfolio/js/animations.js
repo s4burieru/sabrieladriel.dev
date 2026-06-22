@@ -192,6 +192,11 @@ function initScrollAnimations() {
       return;
     }
 
+    // Keep the back link in the service detail view completely static.
+    if (card.closest('#service-detail')) {
+      return;
+    }
+
     // Skip certificate cards (they're nested in the carousel)
     if (card.closest('#certifications')) {
       return;
@@ -253,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     initHeroAnimations();
     initProfileImageAnimation();
-    initScrollAnimations();z
+    initScrollAnimations();
   }, 50);
 });
 
