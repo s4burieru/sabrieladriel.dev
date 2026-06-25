@@ -248,6 +248,7 @@ function initScrollAnimations() {
       });
     });
   });
+
 }
 
 // Carousel animations are now handled by CSS
