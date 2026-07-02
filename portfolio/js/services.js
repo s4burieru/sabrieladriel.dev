@@ -2,6 +2,19 @@
   "web-dev": {
     title: "Frontend Website Development",
     heroDesc: "Build fast, modern, responsive websites.",
+    badge: "Frontend Development",
+    summary:
+      "Responsive websites built with a clear process, polished visuals, and a focus on launch-ready results.",
+    fit: "Landing pages, portfolios, and business sites.",
+    outcome: "A fast, trustworthy site that works well on every screen.",
+    startingAt: "₱3,000+",
+    highlights: [
+      "Responsive Web Design",
+      "Performance Optimization",
+      "SEO-ready structure",
+    ],
+    accent: "rgba(59, 130, 246, 0.18)",
+    accentGlow: "rgba(96, 165, 250, 0.34)",
     content: `
       <div class="space-y-12">
         <div class="space-y-6">
@@ -107,6 +120,19 @@
   multimedia: {
     title: "Multimedia Design",
     heroDesc: "Design that communicates and converts.",
+    badge: "Creative Design",
+    summary:
+      "Clean visual systems and branded assets that keep your content consistent across platforms.",
+    fit: "Creators, brands, and client-facing visuals.",
+    outcome: "A cohesive look that feels modern and easy to scale.",
+    startingAt: "₱500+",
+    highlights: [
+      "UI/UX Prototyping",
+      "Branding Design",
+      "Social Media Visuals",
+    ],
+    accent: "rgba(14, 165, 233, 0.18)",
+    accentGlow: "rgba(34, 211, 238, 0.30)",
     content: `
       <div class="space-y-12">
         <div class="space-y-6">
@@ -181,6 +207,19 @@
   "video-editing": {
     title: "Video Editing",
     heroDesc: "Transform raw footage into engaging content.",
+    badge: "Content Editing",
+    summary:
+      "Tighter pacing, cleaner storytelling, and motion-ready edits for short and long-form video.",
+    fit: "Social content, promos, and school projects.",
+    outcome: "A sharper edit that holds attention and feels polished.",
+    startingAt: "₱800+",
+    highlights: [
+      "Content Creation Editing",
+      "Color Correction",
+      "Motion Graphics",
+    ],
+    accent: "rgba(236, 72, 153, 0.18)",
+    accentGlow: "rgba(251, 146, 60, 0.26)",
     content: `
       <div class="space-y-12">
         <div class="space-y-6">
@@ -253,6 +292,19 @@
   osint: {
     title: "OSINT Investigation",
     heroDesc: "Open-Source Intelligence & Digital Research",
+    badge: "Research & Analysis",
+    summary:
+      "Ethical public-source research that turns scattered data into structured findings and recommendations.",
+    fit: "Due diligence, verification, and digital footprint analysis.",
+    outcome: "A structured report with evidence, citations, and next steps.",
+    startingAt: "₱1,500+",
+    highlights: [
+      "Fact-Checking",
+      "Digital Footprint Analysis",
+      "Risk Assessment",
+    ],
+    accent: "rgba(34, 197, 94, 0.16)",
+    accentGlow: "rgba(74, 222, 128, 0.26)",
     content: `
       <div class="space-y-12">
         <div class="space-y-6">
@@ -358,6 +410,55 @@ const heroTitle = document.getElementById("hero-title");
 const heroDesc = document.getElementById("hero-desc");
 const detailContent = document.getElementById("detail-content");
 
+function buildDetailShell(data) {
+  const highlightItems = data.highlights
+    .map(
+      (item) =>
+        `<span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300">${item}</span>`,
+    )
+    .join("");
+
+  return `
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+      <div
+        class="relative overflow-hidden rounded-2xl border border-white/10 p-8 sm:p-10"
+        style="background: linear-gradient(135deg, ${data.accent} 0%, rgba(255, 255, 255, 0.05) 48%, rgba(10, 10, 10, 0.96) 100%);"
+      >
+        <div
+          class="absolute -right-16 -top-16 h-40 w-40 rounded-full blur-3xl"
+          style="background: ${data.accentGlow};"
+        ></div>
+        <div class="relative space-y-6">
+          <span class="inline-flex items-center px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs uppercase tracking-widest text-gray-300">
+            ${data.badge}
+          </span>
+          <div class="space-y-4">
+            <h3 class="text-3xl sm:text-4xl font-bold text-white">${data.title}</h3>
+            <p class="text-blue-300 text-lg font-semibold">${data.heroDesc}</p>
+            <p class="text-gray-400 leading-relaxed">${data.summary}</p>
+          </div>
+          <div class="flex flex-wrap gap-3">${highlightItems}</div>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg">
+          <div class="text-xs uppercase tracking-widest text-gray-500">Best fit</div>
+          <div class="mt-3 text-lg font-semibold text-white leading-relaxed">${data.fit}</div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg">
+          <div class="text-xs uppercase tracking-widest text-gray-500">Typical outcome</div>
+          <div class="mt-3 text-lg font-semibold text-white leading-relaxed">${data.outcome}</div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg sm:col-span-2">
+          <div class="text-xs uppercase tracking-widest text-gray-500">Starting at</div>
+          <div class="mt-3 text-3xl font-bold text-blue-400">${data.startingAt}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function handleRouting() {
   const urlParams = new URLSearchParams(window.location.search);
   const serviceId = urlParams.get("service");
@@ -368,7 +469,7 @@ function handleRouting() {
     // Update Content
     heroTitle.textContent = data.title;
     heroDesc.textContent = data.heroDesc;
-    detailContent.innerHTML = data.content;
+    detailContent.innerHTML = `${buildDetailShell(data)}${data.content}`;
 
     // Toggle visibility
     listSection.classList.add("hidden");
