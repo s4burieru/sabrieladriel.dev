@@ -16,17 +16,6 @@
     accent: "rgba(59, 130, 246, 0.18)",
     accentGlow: "rgba(96, 165, 250, 0.34)",
     content: `
-      <div class="space-y-12">
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-3">Frontend Website Development</h3>
-            <p class="text-blue-400 text-lg font-semibold">Build fast, modern, responsive websites.</p>
-          </div>
-          <p class="text-gray-400 leading-relaxed">
-            I create responsive, accessible, and visually appealing websites that work across desktop, tablet, and mobile devices. Whether you need a landing page, business website, portfolio, or tourism website, I can transform your design into a fully functional frontend.
-          </p>
-        </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
             <h3 class="text-xl font-bold mb-5">Perfect For</h3>
@@ -134,17 +123,6 @@
     accent: "rgba(14, 165, 233, 0.18)",
     accentGlow: "rgba(34, 211, 238, 0.30)",
     content: `
-      <div class="space-y-12">
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-3">Multimedia Design</h3>
-            <p class="text-blue-400 text-lg font-semibold">Design that communicates and converts.</p>
-          </div>
-          <p class="text-gray-400 leading-relaxed">
-            I create clean and modern visuals for digital platforms-from branding assets and social media graphics to user interface designs for websites and mobile apps. Every design focuses on clarity, usability, and visual consistency.
-          </p>
-        </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
             <h3 class="text-xl font-bold mb-5">Services</h3>
@@ -221,17 +199,6 @@
     accent: "rgba(236, 72, 153, 0.18)",
     accentGlow: "rgba(251, 146, 60, 0.26)",
     content: `
-      <div class="space-y-12">
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-3">Video Editing</h3>
-            <p class="text-blue-400 text-lg font-semibold">Transform raw footage into engaging content.</p>
-          </div>
-          <p class="text-gray-400 leading-relaxed">
-            I edit videos for social media, YouTube, businesses, and promotional campaigns with smooth transitions, subtitles, motion graphics, and color adjustments.
-          </p>
-        </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
             <h3 class="text-xl font-bold mb-5">Services</h3>
@@ -306,20 +273,6 @@
     accent: "rgba(34, 197, 94, 0.16)",
     accentGlow: "rgba(74, 222, 128, 0.26)",
     content: `
-      <div class="space-y-12">
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-3">OSINT Investigation</h3>
-            <p class="text-blue-400 text-lg font-semibold">Open-Source Intelligence & Digital Research</p>
-          </div>
-          <p class="text-gray-400 leading-relaxed">
-            I conduct ethical, legal, and professional open-source intelligence research to gather publicly available information for businesses, researchers, and cybersecurity purposes. I do not perform hacking, unauthorized access, or illegal surveillance.
-          </p>
-          <p class="text-gray-400 leading-relaxed">
-            This service is ideal for clients who need structured research, digital footprint analysis, or cyber threat intelligence using publicly accessible sources.
-          </p>
-        </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
             <h3 class="text-xl font-bold mb-5">Services</h3>
@@ -467,8 +420,10 @@ function handleRouting() {
     const data = servicesData[serviceId];
 
     // Update Content
-    heroTitle.textContent = data.title;
-    heroDesc.textContent = data.heroDesc;
+    heroTitle.textContent = "";
+    heroTitle.classList.add("hidden");
+    heroDesc.textContent = "";
+    heroDesc.classList.add("hidden");
     detailContent.innerHTML = `${buildDetailShell(data)}${data.content}`;
 
     // Toggle visibility
@@ -491,7 +446,10 @@ function handleRouting() {
   } else {
     // Reset Hero Content
     heroTitle.textContent = "What I Do";
-    heroDesc.textContent = "Delivering high-quality digital solutions tailored to your needs. Explore the services I offer to help your projects succeed.";
+    heroTitle.classList.remove("hidden");
+    heroDesc.textContent =
+      "Delivering high-quality digital solutions tailored to your needs. Explore the services I offer to help your projects succeed.";
+    heroDesc.classList.remove("hidden");
 
     listSection.classList.remove("hidden");
     listSection.classList.add("flex");
