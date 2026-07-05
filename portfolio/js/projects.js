@@ -39,7 +39,7 @@ function filterAndSortProjects(projects, searchTerm, category) {
 // Render projects with the generated HTML
 function renderProjectsHTML(projects) {
   return projects.map(project => `
-    <div class="group flex flex-col h-full min-h-110 sm:min-h-120 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/30 hover:bg-white/10 transition">
+    <div class="group flex flex-col h-full min-h-110 sm:min-h-120 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-lg overflow-hidden hover:border-white/30 hover:bg-white/10 transition">
       <!-- Thumbnail Aspect Ratio (16:9) -->
       <div class="relative w-full aspect-video rounded-none overflow-hidden group-hover:border-white/50 transition">
         <img 
