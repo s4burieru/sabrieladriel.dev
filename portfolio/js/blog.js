@@ -7,11 +7,11 @@ function getUrlParams() {
 // Load blog posts from JSON
 async function loadBlogPostsData() {
   try {
-    const response = await fetch('./data/blog-posts.json');
+    const response = await fetch("./data/blog-posts.json");
     const posts = await response.json();
     return posts;
   } catch (error) {
-    console.error('Error loading blog posts:', error);
+    console.error("Error loading blog posts:", error);
     return [];
   }
 }
@@ -19,16 +19,16 @@ async function loadBlogPostsData() {
 // Render single blog post
 async function renderSingleBlogPost() {
   const params = getUrlParams();
-  const postId = parseInt(params.get('id'));
+  const postId = parseInt(params.get("id"));
   const posts = await loadBlogPostsData();
-  const post = posts.find(p => p.id === postId);
-  
+  const post = posts.find((p) => p.id === postId);
+
   if (!post) {
-    window.location.href = 'blog.html';
+    window.location.href = "blog.html";
     return;
   }
 
-  const container = document.getElementById('single-blog-post-container');
+  const container = document.getElementById("single-blog-post-container");
   if (!container) return;
 
   container.innerHTML = `
@@ -56,7 +56,7 @@ async function renderSingleBlogPost() {
 
         <!-- Tags -->
         <div class="flex flex-wrap gap-2">
-          ${post.tags.map(tag => `<span class="inline-block px-3 py-1 text-xs font-medium bg-white/10 border border-white/20 rounded-full text-white">${tag}</span>`).join('')}
+          ${post.tags.map((tag) => `<span class="inline-block px-3 py-1 text-xs font-medium bg-white/10 border border-white/20 rounded-full text-white">${tag}</span>`).join("")}
         </div>
       </div>
 
@@ -86,23 +86,25 @@ async function renderSingleBlogPost() {
   `;
 
   // Show single post section and hide grid
-  document.getElementById('single-blog-post').style.display = 'flex';
-  document.getElementById('all-blog-posts').classList.add('hidden');
-  document.getElementById('hero').classList.add('hidden');
-  
-  // Show back to posts link
-  document.getElementById('back-to-posts-link').style.display = 'flex';
-}
+  document.getElementById("single-blog-post").style.display = "flex";
+  document.getElementById("all-blog-posts").classList.add("hidden");
+  document.getElementById("hero").classList.add("hidden");
 
+  // Show back to posts link
+  document.getElementById("back-to-posts-link").style.display = "flex";
+}
 
 // Render blog posts in the featured blog section (homepage)
 async function renderFeaturedBlogPosts() {
   const posts = await loadBlogPostsData();
-  const container = document.getElementById('blog-posts-container');
-  
+  const container = document.getElementById("blog-posts-container");
+
   if (!container || posts.length === 0) return;
 
-  container.innerHTML = posts.slice(0, 3).map(post => `
+  container.innerHTML = posts
+    .slice(0, 3)
+    .map(
+      (post) => `
     <a href="blog.html?id=${post.id}" class="group flex flex-col h-full min-h-110 sm:min-h-120 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-lg overflow-hidden hover:border-white/30 hover:bg-white/10 transition">
       <!-- Thumbnail Aspect Ratio (16:9) -->
       <div class="relative w-full aspect-video rounded-none overflow-hidden group-hover:border-white/50 transition">
@@ -138,7 +140,7 @@ async function renderFeaturedBlogPosts() {
         
         <!-- Tags -->
         <div class="flex flex-wrap gap-2 mb-4">
-          ${post.tags.map(tag => `<span class="inline-block px-3 py-1 text-xs font-medium bg-white/10 border border-white/20 rounded-full text-white hover:bg-white/20 transition">${tag}</span>`).join('')}
+          ${post.tags.map((tag) => `<span class="inline-block px-3 py-1 text-xs font-medium bg-white/10 border border-white/20 rounded-full text-white hover:bg-white/20 transition">${tag}</span>`).join("")}
         </div>
         
         <!-- Author Line Separator -->
@@ -148,17 +150,21 @@ async function renderFeaturedBlogPosts() {
         <p class="text-xs text-gray-500">By ${post.author}</p>
       </div>
     </a>
-  `).join('');
+  `,
+    )
+    .join("");
 }
 
 // Render all blog posts (blog page)
 async function renderAllBlogPosts() {
   const posts = await loadBlogPostsData();
-  const container = document.getElementById('all-blog-posts-container');
-  
+  const container = document.getElementById("all-blog-posts-container");
+
   if (!container || posts.length === 0) return;
 
-  container.innerHTML = posts.map(post => `
+  container.innerHTML = posts
+    .map(
+      (post) => `
     <a href="blog.html?id=${post.id}" class="group flex flex-col h-full min-h-110 sm:min-h-120 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-lg overflow-hidden hover:border-white/30 hover:bg-white/10 transition">
       <!-- Thumbnail Aspect Ratio (16:9) -->
       <div class="relative w-full aspect-video rounded-none overflow-hidden group-hover:border-white/50 transition">
@@ -194,7 +200,7 @@ async function renderAllBlogPosts() {
         
         <!-- Tags -->
         <div class="flex flex-wrap gap-2 mb-4">
-          ${post.tags.map(tag => `<span class="inline-block px-3 py-1 text-xs font-medium bg-white/10 border border-white/20 rounded-full text-white hover:bg-white/20 transition">${tag}</span>`).join('')}
+          ${post.tags.map((tag) => `<span class="inline-block px-3 py-1 text-xs font-medium bg-white/10 border border-white/20 rounded-full text-white hover:bg-white/20 transition">${tag}</span>`).join("")}
         </div>
         
         <!-- Author Line Separator -->
@@ -204,25 +210,27 @@ async function renderAllBlogPosts() {
         <p class="text-xs text-gray-500">By ${post.author}</p>
       </div>
     </a>
-  `).join('');
+  `,
+    )
+    .join("");
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   const params = getUrlParams();
-  const postId = params.get('id');
+  const postId = params.get("id");
 
   // If an id parameter exists, show single post view
   if (postId) {
     renderSingleBlogPost();
   } else {
     // Load featured posts if on homepage
-    if (document.getElementById('blog-posts-container')) {
+    if (document.getElementById("blog-posts-container")) {
       renderFeaturedBlogPosts();
     }
-    
+
     // Load all posts if on blog page
-    if (document.getElementById('all-blog-posts-container')) {
+    if (document.getElementById("all-blog-posts-container")) {
       renderAllBlogPosts();
     }
   }

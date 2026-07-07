@@ -3,137 +3,172 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Hero Section Animations
 function initHeroAnimations() {
-  const heroSection = document.getElementById('hero');
+  const heroSection = document.getElementById("hero");
   if (!heroSection) return;
 
   // Set initial state - Make sure everything is visible
-  gsap.set([
-    heroSection.querySelector('.inline-block'),
-    heroSection.querySelector('h1'),
-    heroSection.querySelector('.text-2xl'),
-    heroSection.querySelector('p.text-gray-400'),
-    heroSection.querySelector('.flex.flex-col.sm\\:flex-row'),
-    heroSection.querySelector('.flex.flex-col.items-center'),
-    heroSection.querySelector('.flex.gap-2')
-  ], { opacity: 1, y: 0, x: 0 });
+  gsap.set(
+    [
+      heroSection.querySelector(".inline-block"),
+      heroSection.querySelector("h1"),
+      heroSection.querySelector(".text-2xl"),
+      heroSection.querySelector("p.text-gray-400"),
+      heroSection.querySelector(".flex.flex-col.sm\\:flex-row"),
+      heroSection.querySelector(".flex.flex-col.items-center"),
+      heroSection.querySelector(".flex.gap-2"),
+    ],
+    { opacity: 1, y: 0, x: 0 },
+  );
 
   const timeline = gsap.timeline();
 
   // Animate the badge "Open to work!"
-  const badge = heroSection.querySelector('.inline-block');
+  const badge = heroSection.querySelector(".inline-block");
   if (badge) {
-    timeline.from(badge, {
-      duration: 0.7,
-      opacity: 0,
-      y: -20,
-      ease: 'power2.out'
-    }, 0);
+    timeline.from(
+      badge,
+      {
+        duration: 0.7,
+        opacity: 0,
+        y: -20,
+        ease: "power2.out",
+      },
+      0,
+    );
   }
 
   // Animate the main heading
-  const heading = heroSection.querySelector('h1');
+  const heading = heroSection.querySelector("h1");
   if (heading) {
-    timeline.from(heading, {
-      duration: 0.8,
-      opacity: 0,
-      y: 30,
-      ease: 'power2.out'
-    }, 0.2);
+    timeline.from(
+      heading,
+      {
+        duration: 0.8,
+        opacity: 0,
+        y: 30,
+        ease: "power2.out",
+      },
+      0.2,
+    );
   }
 
   // Animate role text
-  const roleDiv = heroSection.querySelector('.text-2xl');
+  const roleDiv = heroSection.querySelector(".text-2xl");
   if (roleDiv) {
-    timeline.from(roleDiv, {
-      duration: 0.6,
-      opacity: 0,
-      y: 20,
-      ease: 'power2.out'
-    }, 0.4);
+    timeline.from(
+      roleDiv,
+      {
+        duration: 0.6,
+        opacity: 0,
+        y: 20,
+        ease: "power2.out",
+      },
+      0.4,
+    );
   }
 
   // Animate description paragraph
-  const description = heroSection.querySelector('p.text-gray-400');
+  const description = heroSection.querySelector("p.text-gray-400");
   if (description) {
-    timeline.from(description, {
-      duration: 0.8,
-      opacity: 0,
-      y: 20,
-      ease: 'power2.out'
-    }, 0.55);
+    timeline.from(
+      description,
+      {
+        duration: 0.8,
+        opacity: 0,
+        y: 20,
+        ease: "power2.out",
+      },
+      0.55,
+    );
   }
 
   // Animate CTA buttons
-  const ctaContainer = heroSection.querySelector('.flex.flex-col.sm\\:flex-row.gap-4');
+  const ctaContainer = heroSection.querySelector(
+    ".flex.flex-col.sm\\:flex-row.gap-4",
+  );
   if (ctaContainer) {
-    timeline.from(ctaContainer, {
-      duration: 0.8,
-      opacity: 0,
-      y: 20,
-      ease: 'power2.out'
-    }, 0.7);
+    timeline.from(
+      ctaContainer,
+      {
+        duration: 0.8,
+        opacity: 0,
+        y: 20,
+        ease: "power2.out",
+      },
+      0.7,
+    );
 
     // Add hover animations to CTA buttons
-    const buttons = ctaContainer.querySelectorAll('a');
-    buttons.forEach(button => {
-      button.addEventListener('mouseenter', () => {
+    const buttons = ctaContainer.querySelectorAll("a");
+    buttons.forEach((button) => {
+      button.addEventListener("mouseenter", () => {
         gsap.to(button, {
           duration: 0.3,
           y: -5,
-          boxShadow: '0 10px 25px rgba(255, 255, 255, 0.1)',
-          overwrite: 'auto'
+          boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
+          overwrite: "auto",
         });
       });
-      button.addEventListener('mouseleave', () => {
+      button.addEventListener("mouseleave", () => {
         gsap.to(button, {
           duration: 0.3,
           y: 0,
-          boxShadow: 'none',
-          overwrite: 'auto'
+          boxShadow: "none",
+          overwrite: "auto",
         });
       });
     });
   }
 
   // Animate profile image with rotation
-  const profileDiv = heroSection.querySelector('.flex.flex-col.items-center.gap-8');
+  const profileDiv = heroSection.querySelector(
+    ".flex.flex-col.items-center.gap-8",
+  );
   if (profileDiv) {
-    timeline.from(profileDiv, {
-      duration: 0.8,
-      opacity: 0,
-      x: 50,
-      rotation: -5,
-      ease: 'power2.out'
-    }, 0.2);
+    timeline.from(
+      profileDiv,
+      {
+        duration: 0.8,
+        opacity: 0,
+        x: 50,
+        rotation: -5,
+        ease: "power2.out",
+      },
+      0.2,
+    );
   }
 
   // Animate social icons
-  const socialContainer = heroSection.querySelector('.flex.gap-2');
+  const socialContainer = heroSection.querySelector(".flex.gap-2");
   if (socialContainer) {
-    timeline.from(socialContainer, {
-      duration: 0.8,
-      opacity: 0,
-      y: 20,
-      ease: 'power2.out'
-    }, 0.85);
+    timeline.from(
+      socialContainer,
+      {
+        duration: 0.8,
+        opacity: 0,
+        y: 20,
+        ease: "power2.out",
+      },
+      0.85,
+    );
 
     // Add hover animation to social icons
-    const socialIcons = socialContainer.querySelectorAll('a');
-    socialIcons.forEach(icon => {
-      icon.addEventListener('mouseenter', () => {
+    const socialIcons = socialContainer.querySelectorAll("a");
+    socialIcons.forEach((icon) => {
+      icon.addEventListener("mouseenter", () => {
         gsap.to(icon, {
           duration: 0.3,
           scale: 1.15,
           rotation: 10,
-          overwrite: 'auto'
+          overwrite: "auto",
         });
       });
-      icon.addEventListener('mouseleave', () => {
+      icon.addEventListener("mouseleave", () => {
         gsap.to(icon, {
           duration: 0.3,
           scale: 1,
           rotation: 0,
-          overwrite: 'auto'
+          overwrite: "auto",
         });
       });
     });
@@ -142,24 +177,24 @@ function initHeroAnimations() {
 
 // Profile Image Hover Animation
 function initProfileImageAnimation() {
-  const profileCircle = document.querySelector('.w-32.sm\\:w-40.md\\:w-48');
+  const profileCircle = document.querySelector(".w-32.sm\\:w-40.md\\:w-48");
   if (!profileCircle) return;
 
-  profileCircle.addEventListener('mouseenter', () => {
+  profileCircle.addEventListener("mouseenter", () => {
     gsap.to(profileCircle, {
       duration: 0.4,
       scale: 1.05,
-      boxShadow: '0 0 30px rgba(255, 255, 255, 0.2)',
-      overwrite: 'auto'
+      boxShadow: "0 0 30px rgba(255, 255, 255, 0.2)",
+      overwrite: "auto",
     });
   });
 
-  profileCircle.addEventListener('mouseleave', () => {
+  profileCircle.addEventListener("mouseleave", () => {
     gsap.to(profileCircle, {
       duration: 0.4,
       scale: 1,
-      boxShadow: 'none',
-      overwrite: 'auto'
+      boxShadow: "none",
+      overwrite: "auto",
     });
   });
 }
@@ -167,53 +202,61 @@ function initProfileImageAnimation() {
 // Scroll Animations for Sections
 function initScrollAnimations() {
   // Animate all h2 headings on scroll
-  const headings = document.querySelectorAll('h2');
+  const headings = document.querySelectorAll("h2");
   headings.forEach((heading) => {
     gsap.from(heading, {
       scrollTrigger: {
         trigger: heading,
-        start: 'top 80%',
-        toggleActions: 'play none none reverse'
+        start: "top 80%",
+        toggleActions: "play none none reverse",
       },
       duration: 0.8,
       opacity: 0,
       y: 30,
-      ease: 'power2.out'
+      ease: "power2.out",
     });
   });
 
   // Animate section cards with hover effects (excluding certificates)
-  const cardSelectors = ['a.flex', '.group.flex', '[class*="group"]'];
-  const allCards = document.querySelectorAll(cardSelectors.join(', '));
-  
-  allCards.forEach(card => {
+  const cardSelectors = ["a.flex", ".group.flex", '[class*="group"]'];
+  const allCards = document.querySelectorAll(cardSelectors.join(", "));
+
+  allCards.forEach((card) => {
     // Keep the services section static; only the rest of the site gets hover lift.
-    if (card.closest('#detailed-services')) {
+    if (card.closest("#detailed-services")) {
       return;
     }
 
     // Keep the back link in the service detail view completely static.
-    if (card.closest('#service-detail')) {
+    if (card.closest("#service-detail")) {
       return;
     }
 
     // Skip certificate cards (they're nested in the carousel)
-    if (card.closest('#certifications')) {
+    if (card.closest("#certifications")) {
       return;
     }
 
     // Skip section header "View All" and "More About Me" links
-    if (card.tagName === 'A' && (card.innerText.includes('View All') || card.innerText.includes('More About Me'))) {
+    if (
+      card.tagName === "A" &&
+      (card.innerText.includes("View All") ||
+        card.innerText.includes("More About Me"))
+    ) {
       return;
     }
 
     // Skip navbar logo
-    if (card.closest('#main-navbar')) {
+    if (card.closest("#main-navbar")) {
       return;
     }
 
     // Skip "View Details" buttons in services
-    if (card.tagName === 'A' && card.href && card.href.includes('services.html?service=')) {
+    if (
+      card.tagName === "A" &&
+      card.href &&
+      card.href.includes("services.html?service=")
+    ) {
       return;
     }
 
@@ -221,41 +264,40 @@ function initScrollAnimations() {
     gsap.from(card, {
       scrollTrigger: {
         trigger: card,
-        start: 'top 90%',
-        toggleActions: 'play none none reverse'
+        start: "top 90%",
+        toggleActions: "play none none reverse",
       },
       duration: 0.6,
       opacity: 0,
       y: 20,
-      ease: 'power2.out'
+      ease: "power2.out",
     });
 
     // Add hover animation
-    card.addEventListener('mouseenter', () => {
+    card.addEventListener("mouseenter", () => {
       gsap.to(card, {
         duration: 0.3,
         y: -8,
-        boxShadow: '0 8px 24px rgba(255, 255, 255, 0.1)',
-        overwrite: 'auto'
+        boxShadow: "0 8px 24px rgba(255, 255, 255, 0.1)",
+        overwrite: "auto",
       });
     });
-    card.addEventListener('mouseleave', () => {
+    card.addEventListener("mouseleave", () => {
       gsap.to(card, {
         duration: 0.3,
         y: 0,
-        boxShadow: 'none',
-        overwrite: 'auto'
+        boxShadow: "none",
+        overwrite: "auto",
       });
     });
   });
-
 }
 
 // Carousel animations are now handled by CSS
 // See animate-infinite-scroll class in css/input.css
 
 // Main initialization
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     initHeroAnimations();
     initProfileImageAnimation();
@@ -264,6 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Refresh ScrollTrigger on load
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   ScrollTrigger.refresh();
 });

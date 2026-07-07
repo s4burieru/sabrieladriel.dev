@@ -1,50 +1,130 @@
 <!-- Modern Floating Navbar -->
-    <nav id="main-navbar" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-lg rounded-full px-8 py-2.5 border bg-white/10 border-white/10 shadow-sm transition-all duration-300 w-12/13">
+<nav
+  id="main-navbar"
+  class="fixed top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-lg rounded-full px-8 py-2.5 border bg-white/10 border-white/10 shadow-sm transition-all duration-300 w-12/13"
+>
   <div class="flex items-center justify-between gap-8">
-    
     <!-- Left Section: Logo/Home -->
     <div class="shrink-0">
-      <a href="index.html" class="font-poppins font-bold text-lg text-white hover:text-blue-600 transition-colors duration-200 flex items-center gap-2">
+      <a
+        href="index.html"
+        class="font-poppins font-bold text-lg text-white hover:text-blue-600 transition-colors duration-200 flex items-center gap-2"
+      >
         <span class="text-2xl">SA</span>
       </a>
     </div>
 
     <!-- Middle Section: Navigation Links -->
     <div class="hidden lg:flex items-center gap-8">
-      <a href="about.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200">About</a>
-      <a href="projects.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200">Projects</a>
-      <a href="services.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200">Services</a>
-      <a href="blog.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200">Blog</a>
-      <a href="contact.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200">Contact</a>
+      <a
+        href="about.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
+        >About</a
+      >
+      <a
+        href="projects.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
+        >Projects</a
+      >
+      <a
+        href="services.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
+        >Services</a
+      >
+      <a
+        href="blog.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
+        >Blog</a
+      >
+      <a
+        href="contact.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
+        >Contact</a
+      >
     </div>
 
     <!-- Right Section: Resume, Theme Toggle -->
     <div class="flex items-center gap-2">
-      <a href="#resume" class="hidden sm:inline-block font-poppins text-sm font-semibold px-4 py-2.5 rounded-full bg-white text-black hover:bg-blue-50 dark:bg-white dark:hover:bg-blue-50 transition-colors duration-200">
+      <a
+        href="#resume"
+        class="hidden sm:inline-block font-poppins text-sm font-semibold px-4 py-2.5 rounded-full bg-white text-black hover:bg-blue-50 dark:bg-white dark:hover:bg-blue-50 transition-colors duration-200"
+      >
         Resume
       </a>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-0" aria-label="Toggle mobile menu">
-        <svg id="menu-icon" class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-0"
+        aria-label="Toggle mobile menu"
+      >
+        <svg
+          id="menu-icon"
+          class="w-5 h-5 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
         </svg>
-        <svg id="close-icon" class="w-5 h-5 text-white hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        <svg
+          id="close-icon"
+          class="w-5 h-5 text-white hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
         </svg>
       </button>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden fixed top-24 left-4 right-4 z-40 backdrop-blur-lg rounded-2xl border border-white/20 p-4 lg:hidden bg-black/90">
+  <div
+    id="mobile-menu"
+    class="hidden fixed top-24 left-4 right-4 z-40 backdrop-blur-lg rounded-2xl border border-white/20 p-4 lg:hidden bg-black/90"
+  >
     <div class="flex flex-col gap-3">
-      <a href="about.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2">About</a>
-      <a href="projects.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2">Projects</a>
-      <a href="services.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2">Services</a>
-      <a href="blog.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2">Blog</a>
-      <a href="contact.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2">Contact</a>
-      <a href="#resume" class="font-poppins text-sm font-semibold px-4 py-2 rounded-full bg-white text-black hover:bg-blue-50 transition-colors duration-200 text-center">
+      <a
+        href="about.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2"
+        >About</a
+      >
+      <a
+        href="projects.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2"
+        >Projects</a
+      >
+      <a
+        href="services.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2"
+        >Services</a
+      >
+      <a
+        href="blog.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2"
+        >Blog</a
+      >
+      <a
+        href="contact.html"
+        class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2"
+        >Contact</a
+      >
+      <a
+        href="#resume"
+        class="font-poppins text-sm font-semibold px-4 py-2 rounded-full bg-white text-black hover:bg-blue-50 transition-colors duration-200 text-center"
+      >
         Resume
       </a>
     </div>
