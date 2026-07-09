@@ -603,8 +603,8 @@ function handleRouting() {
 
     listSection.classList.remove("hidden");
     listSection.classList.add("flex");
-    detailSection.classList.remove("hidden");
-    detailSection.classList.add("flex");
+    detailSection.classList.add("hidden");
+    detailSection.classList.remove("flex");
 
     // Show extra sections
     if (whyMeSection) {
