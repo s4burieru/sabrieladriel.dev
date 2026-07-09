@@ -16,91 +16,145 @@
     accent: "rgba(59, 130, 246, 0.18)",
     accentGlow: "rgba(96, 165, 250, 0.34)",
     content: `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Perfect For</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Small businesses</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Students</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Startups</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Personal brands</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Resorts</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Tourism websites</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Local organizations</li>
-            </ul>
+      <!-- Overview -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-blue-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Overview</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-blue-500/[0.07] to-transparent p-8">
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-blue-500/10 blur-3xl"></div>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-5">
+                <svg class="w-5 h-5 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                <h3 class="text-xl font-bold">Perfect For</h3>
+              </div>
+              <ul class="space-y-3 text-gray-400">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Small businesses</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Students</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Startups</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Personal brands</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Resorts</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Tourism websites</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Local organizations</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Services Included</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Responsive Design</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Mobile Optimization</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Landing Pages</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Portfolio Websites</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Business Websites</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Website Redesign</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Frontend Development</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Basic SEO Setup</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Performance Optimization</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Deployment Assistance</li>
-            </ul>
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-blue-500/[0.07] to-transparent p-8">
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-blue-500/10 blur-3xl"></div>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-5">
+                <svg class="w-5 h-5 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                <h3 class="text-xl font-bold">Services Included</h3>
+              </div>
+              <ul class="space-y-3 text-gray-400">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Responsive Design</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Mobile Optimization</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Landing Pages</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Portfolio Websites</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Business Websites</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Website Redesign</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Frontend Development</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Basic SEO Setup</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Performance Optimization</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Deployment Assistance</li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Technologies</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> HTML5</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> CSS3</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> JavaScript</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Tailwind CSS</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> React (Basic)</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Git & GitHub</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Vercel</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Netlify</li>
-            </ul>
+      <!-- Technologies -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-blue-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Technologies</h2>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">HTML5</span>
+          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">CSS3</span>
+          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">JavaScript</span>
+          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">Tailwind CSS</span>
+          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">React (Basic)</span>
+          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">Git & GitHub</span>
+          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">Vercel</span>
+          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">Netlify</span>
+        </div>
+      </div>
+
+      <!-- Process -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-blue-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Process</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-5 rounded-2xl border border-white/10 bg-white/3 text-center group hover:border-blue-500/20  hover:bg-blue-500/3 transition-all duration-300">
+            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg">1</div>
+            <h4 class="font-semibold text-white text-sm">Consultation</h4>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Process</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Consultation</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Planning</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Design Review</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Development</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Testing</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Deployment</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Revisions</li>
-            </ul>
+          <div class="p-5 rounded-2xl border border-white/10 bg-white/3 text-center group hover:border-blue-500/20  hover:bg-blue-500/3 transition-all duration-300">
+            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg">2</div>
+            <h4 class="font-semibold text-white text-sm">Planning</h4>
+          </div>
+          <div class="p-5 rounded-2xl border border-white/10 bg-white/3 text-center group hover:border-blue-500/20  hover:bg-blue-500/3 transition-all duration-300">
+            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg">3</div>
+            <h4 class="font-semibold text-white text-sm">Design Review</h4>
+          </div>
+          <div class="p-5 rounded-2xl border border-white/10 bg-white/3 text-center group hover:border-blue-500/20  hover:bg-blue-500/3 transition-all duration-300">
+            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg">4</div>
+            <h4 class="font-semibold text-white text-sm">Development</h4>
+          </div>
+          <div class="p-5 rounded-2xl border border-white/10 bg-white/3 text-center group hover:border-blue-500/20  hover:bg-blue-500/3 transition-all duration-300">
+            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg">5</div>
+            <h4 class="font-semibold text-white text-sm">Testing</h4>
+          </div>
+          <div class="p-5 rounded-2xl border border-white/10 bg-white/3 text-center group hover:border-blue-500/20  hover:bg-blue-500/3] transition-all duration-300">
+            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg">6</div>
+            <h4 class="font-semibold text-white text-sm">Deployment</h4>
+          </div>
+          <div class="p-5 rounded-2xl border border-white/10 bg-white/3 text-center group hover:border-blue-500/20 hover:bg-blue-500/3 transition-all duration-300">
+            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg">7</div>
+            <h4 class="font-semibold text-white text-sm">Revisions</h4>
           </div>
         </div>
+      </div>
 
+      <!-- Pricing -->
+      <div>
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-blue-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Pricing Plans</h2>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Starter</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱3,000+</p>
-            <ul class="space-y-2 text-gray-400 text-sm">
-              <li>1 Page</li>
-              <li>Responsive</li>
-              <li>Contact Form</li>
-              <li>Basic SEO</li>
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-2">Starter</h3>
+            <p class="text-3xl font-bold text-blue-500 mb-6">₱3,000+</p>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1 Page</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Responsive</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Contact Form</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Basic SEO</li>
             </ul>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Business</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱8,000+</p>
-            <ul class="space-y-2 text-gray-400 text-sm">
-              <li>Up to 5 Pages</li>
-              <li>Responsive</li>
-              <li>Animations</li>
-              <li>Contact Form</li>
-              <li>Gallery</li>
-              <li>Deployment</li>
+          <div class="p-8 rounded-2xl border border-blue-500/20 bg-linear-to-brfrom-blue-500/8o-transparent relative hover:border-blue-500/40 transition-all duration-300">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500 text-xs font-semibold text-white">Popular</div>
+            <h3 class="text-xl font-bold mb-2">Business</h3>
+            <p class="text-3xl font-bold text-blue-500 mb-6">₱8,000+</p>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Up to 5 Pages</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Responsive</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Animations</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Contact Form</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Gallery</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Deployment</li>
             </ul>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Custom</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">Starting at ₱15,000</p>
-            <p class="text-sm text-gray-400">For larger projects.</p>
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-2">Custom</h3>
+            <p class="text-3xl font-bold text-blue-500 mb-6">Starting at ₱15,000</p>
+            <p class="text-sm text-gray-400">For larger projects with custom requirements.</p>
           </div>
         </div>
       </div>
@@ -123,61 +177,91 @@
     accent: "rgba(14, 165, 233, 0.18)",
     accentGlow: "rgba(34, 211, 238, 0.30)",
     content: `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Services</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Social Media Graphics</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Posters</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Flyers</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Tarpaulins</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Logos</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Brand Assets</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> UI Design</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Website Mockups</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Mobile App UI</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Wireframes</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Prototypes</li>
-            </ul>
+      <!-- Overview -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-cyan-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Overview</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-cyan-500/[0.07] to-transparent p-8">
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-cyan-500/10 blur-3xl"></div>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-5">
+                <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                <h3 class="text-xl font-bold">Services</h3>
+              </div>
+              <ul class="space-y-3 text-gray-400">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Social Media Graphics</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Posters</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Flyers</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Tarpaulins</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Logos</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Brand Assets</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> UI Design</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Website Mockups</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Mobile App UI</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Wireframes</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Prototypes</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Tools</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Figma</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Adobe Photoshop</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Canva</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Illustrator (if applicable)</li>
-            </ul>
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-cyan-500/[0.07] to-transparent p-8">
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-cyan-500/10 blur-3xl"></div>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-5">
+                <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <h3 class="text-xl font-bold">Tools</h3>
+              </div>
+              <ul class="space-y-3 text-gray-400">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Figma</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Adobe Photoshop</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Canva</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Illustrator (if applicable)</li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
 
+      <!-- Pricing -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-cyan-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Pricing Plans</h2>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Social Graphics</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱500+</p>
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-2">Social Graphics</h3>
+            <p class="text-3xl font-bold text-cyan-500 mb-4">₱500+</p>
             <p class="text-sm text-gray-400">Per design</p>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Branding Kit</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱2,500+</p>
+          <div class="p-8 rounded-2xl border border-cyan-500/20 bg-linear-to-b from-cyan-500/8 to-transparent relative hover:border-cyan-500/40 transition-all duration-300">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-cyan-500 text-xs font-semibold text-white">Popular</div>
+            <h3 class="text-xl font-bold mb-2">Branding Kit</h3>
+            <p class="text-3xl font-bold text-cyan-500 mb-4">₱2,500+</p>
             <p class="text-sm text-gray-400">Logo + Color Palette + Typography</p>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">UI Design</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱5,000+</p>
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-2">UI Design</h3>
+            <p class="text-3xl font-bold text-cyan-500 mb-4">₱5,000+</p>
             <p class="text-sm text-gray-400">Landing page or app screens.</p>
           </div>
         </div>
+      </div>
 
-        <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-          <h3 class="text-xl font-bold mb-5">Deliverables</h3>
-          <ul class="flex flex-wrap gap-3 text-sm text-gray-300">
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">PNG</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">JPG</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">PDF</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">Figma File</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">Editable Source Files</li>
-          </ul>
+      <!-- Deliverables -->
+      <div>
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-cyan-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Deliverables</h2>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">PNG</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">JPG</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">PDF</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">Figma File</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">Editable Source Files</span>
         </div>
       </div>
     `,
@@ -199,59 +283,88 @@
     accent: "rgba(236, 72, 153, 0.18)",
     accentGlow: "rgba(251, 146, 60, 0.26)",
     content: `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Services</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> YouTube Editing</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Reels</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> TikTok</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Facebook Videos</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Promotional Videos</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> School Projects</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Business Ads</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Highlight Videos</li>
-            </ul>
+      <!-- Overview -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-pink-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Overview</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-pink-500/[0.07] to-transparent p-8">
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-3xl"></div>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-5">
+                <svg class="w-5 h-5 text-pink-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <h3 class="text-xl font-bold">Services</h3>
+              </div>
+              <ul class="space-y-3 text-gray-400">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> YouTube Editing</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> Reels</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> TikTok</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> Facebook Videos</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> Promotional Videos</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> School Projects</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> Business Ads</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> Highlight Videos</li>
+              </ul>
+            </div>
           </div>
-
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Tools</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> CapCut</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Adobe Premiere Pro (if applicable)</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> After Effects (if applicable)</li>
-            </ul>
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-pink-500/[0.07] to-transparent p-8">
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-3xl"></div>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-5">
+                <svg class="w-5 h-5 text-pink-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <h3 class="text-xl font-bold">Tools</h3>
+              </div>
+              <ul class="space-y-3 text-gray-400">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> CapCut</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> Adobe Premiere Pro (if applicable)</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> After Effects (if applicable)</li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
 
+      <!-- Pricing -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-pink-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Pricing Plans</h2>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Short Form</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱800+</p>
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-2">Short Form</h3>
+            <p class="text-3xl font-bold text-pink-500 mb-4">₱800+</p>
             <p class="text-sm text-gray-400">Up to 60 seconds</p>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Long Form</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱2,000+</p>
+          <div class="p-8 rounded-2xl border border-pink-500/20 bg-linear-to-b from-pink-500/8 to-transparent relative hover:border-pink-500/40 transition-all duration-300">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-pink-500 text-xs font-semibold text-white">Popular</div>
+            <h3 class="text-xl font-bold mb-2">Long Form</h3>
+            <p class="text-3xl font-bold text-pink-500 mb-4">₱2,000+</p>
             <p class="text-sm text-gray-400">5-15 minutes</p>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Custom</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">Depends on complexity.</p>
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-2">Custom</h3>
+            <p class="text-3xl font-bold text-pink-500 mb-4">Depends on complexity.</p>
             <p class="text-sm text-gray-400">For specialized projects.</p>
           </div>
         </div>
+      </div>
 
-        <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-          <h3 class="text-xl font-bold mb-5">Includes</h3>
-          <ul class="flex flex-wrap gap-3 text-sm text-gray-300">
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">Color Correction</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">Audio Cleanup</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">Captions</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">Motion Graphics</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">Transitions</li>
-            <li class="px-4 py-2 rounded-full bg-white/5 border border-white/10">Background Music</li>
-          </ul>
+      <!-- Includes -->
+      <div>
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-pink-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">What's Included</h2>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">Color Correction</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">Audio Cleanup</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">Captions</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">Motion Graphics</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">Transitions</span>
+          <span class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 text-sm text-gray-300">Background Music</span>
         </div>
       </div>
     `,
@@ -273,78 +386,115 @@
     accent: "rgba(34, 197, 94, 0.16)",
     accentGlow: "rgba(74, 222, 128, 0.26)",
     content: `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Services</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Digital Footprint Analysis</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Username Investigation</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Email Enumeration (Public Sources Only)</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Domain Research</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Company Research</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Brand Monitoring</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Social Media Analysis</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Threat Intelligence Research</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Executive Profiling</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Due Diligence Research</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Basic Geolocation Analysis</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Data Collection & Verification</li>
-            </ul>
+      <!-- Overview -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-green-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Overview</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-green-500/[0.07] to-transparent p-8">
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-green-500/10 blur-3xl"></div>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-5">
+                <svg class="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                <h3 class="text-xl font-bold">Services</h3>
+              </div>
+              <ul class="space-y-3 text-gray-400">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Digital Footprint Analysis</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Username Investigation</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Email Enumeration (Public Sources Only)</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Domain Research</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Company Research</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Brand Monitoring</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Social Media Analysis</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Threat Intelligence Research</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Executive Profiling</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Due Diligence Research</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Basic Geolocation Analysis</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Data Collection & Verification</li>
+              </ul>
+            </div>
           </div>
-
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Tools</h3>
-            <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Maltego</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> SpiderFoot</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Google Dorking</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Shodan</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Have I Been Pwned</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Intelligence X</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> VirusTotal</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Wayback Machine</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> WHOIS</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Various public OSINT resources</li>
-            </ul>
+          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-green-500/[0.07] to-transparent p-8">
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-green-500/10 blur-3xl"></div>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-5">
+                <svg class="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <h3 class="text-xl font-bold">Tools</h3>
+              </div>
+              <ul class="space-y-3 text-gray-400">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Maltego</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> SpiderFoot</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Google Dorking</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Shodan</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Have I Been Pwned</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Intelligence X</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> VirusTotal</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Wayback Machine</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> WHOIS</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Various public OSINT resources</li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
 
+      <!-- Pricing -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-1 h-7 bg-green-500 rounded-full shrink-0"></span>
+          <h2 class="text-2xl font-bold">Pricing Plans</h2>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Basic Research</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱1,500+</p>
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-2">Basic Research</h3>
+            <p class="text-3xl font-bold text-green-500 mb-4">₱1,500+</p>
             <p class="text-sm text-gray-400">1 Target</p>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Company Research</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱3,500+</p>
+          <div class="p-8 rounded-2xl border border-green-500/20 bg-linear-to-b from-green-500/8 to-transparent relative hover:border-green-500/40 transition-all duration-300">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-green-500 text-xs font-semibold text-white">Popular</div>
+            <h3 class="text-xl font-bold mb-2">Company Research</h3>
+            <p class="text-3xl font-bold text-green-500 mb-4">₱3,500+</p>
             <p class="text-sm text-gray-400">Detailed company profile</p>
           </div>
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-3">Threat Intelligence Report</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-4">₱5,000+</p>
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+            <h3 class="text-xl font-bold mb-2">Threat Intelligence</h3>
+            <p class="text-3xl font-bold text-green-500 mb-4">₱5,000+</p>
             <p class="text-sm text-gray-400">Cyber threat report</p>
           </div>
         </div>
+      </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Deliverables</h3>
+      <!-- Deliverables + Notice -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-green-500/[0.07] to-transparent p-8">
+          <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-green-500/10 blur-3xl"></div>
+          <div class="relative">
+            <div class="flex items-center gap-3 mb-5">
+              <svg class="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <h3 class="text-xl font-bold">Deliverables</h3>
+            </div>
             <ul class="space-y-3 text-gray-400">
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Professional PDF Report</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Executive Summary</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Timeline</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Evidence Links</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Screenshots</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Source Citations</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Risk Assessment</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Recommendations</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Professional PDF Report</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Executive Summary</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Timeline</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Evidence Links</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Screenshots</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Source Citations</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Risk Assessment</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Recommendations</li>
             </ul>
           </div>
-
-          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="text-xl font-bold mb-5">Important Notice</h3>
-            <p class="text-gray-400 leading-relaxed">
+        </div>
+        <div class="relative overflow-hidden rounded-2xl border border-yellow-500/20 bg-linear-to-br from-yellow-500/6 to-transparent p-8">
+          <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-yellow-500/10 blur-3xl"></div>
+          <div class="relative">
+            <div class="flex items-center gap-3 mb-5">
+              <svg class="w-5 h-5 text-yellow-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+              <h3 class="text-xl font-bold">Important Notice</h3>
+            </div>
+            <p class="text-gray-400 leading-relaxed text-sm">
               I only conduct investigations using legally accessible public information (OSINT). I do not hack accounts, bypass security measures, access private information without authorization, or engage in activities that violate laws or platform terms of service.
             </p>
           </div>
@@ -453,8 +603,8 @@ function handleRouting() {
 
     listSection.classList.remove("hidden");
     listSection.classList.add("flex");
-    detailSection.classList.add("hidden");
-    detailSection.classList.remove("flex");
+    detailSection.classList.remove("hidden");
+    detailSection.classList.add("flex");
 
     // Show extra sections
     if (whyMeSection) {
