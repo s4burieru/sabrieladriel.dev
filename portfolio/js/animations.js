@@ -201,9 +201,14 @@ function initProfileImageAnimation() {
 
 // Scroll Animations for Sections
 function initScrollAnimations() {
-  // Animate all h2 headings on scroll
+  // Animate all h2 headings on scroll (excluding detailed services)
   const headings = document.querySelectorAll("h2");
   headings.forEach((heading) => {
+    // Skip h2 headings inside the detailed service detail view
+    if (heading.closest("#service-detail")) {
+      return;
+    }
+
     gsap.from(heading, {
       scrollTrigger: {
         trigger: heading,
