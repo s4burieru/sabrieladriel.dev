@@ -228,7 +228,7 @@ function initScrollAnimations() {
 
   allCards.forEach((card) => {
     // Keep the services section static; only the rest of the site gets hover lift.
-    if (card.closest("#detailed-services")) {
+    if (card.closest("#detailed-services")) {di
       return;
     }
 

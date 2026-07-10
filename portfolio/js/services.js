@@ -574,6 +574,10 @@ function handleRouting() {
     heroTitle.classList.add("hidden");
     heroDesc.textContent = "";
     heroDesc.classList.add("hidden");
+    heroSection = document.getElementById("services-hero");
+    if (heroSection) {
+      heroSection.style.paddingTop = "0";
+    }
     detailContent.innerHTML = `${buildDetailShell(data)}${data.content}`;
 
     // Toggle visibility
@@ -581,6 +585,7 @@ function handleRouting() {
     listSection.classList.remove("flex");
     detailSection.classList.remove("hidden");
     detailSection.classList.add("flex");
+    detailSection.style.paddingTop = "clamp(100px, 14vw, 160px)";
 
     // Hide extra sections
     if (whyMeSection) {
@@ -600,6 +605,10 @@ function handleRouting() {
     heroDesc.textContent =
       "Delivering high-quality digital solutions tailored to your needs. Explore the services I offer to help your projects succeed.";
     heroDesc.classList.remove("hidden");
+    heroSection = document.getElementById("services-hero");
+    if (heroSection) {
+      heroSection.style.paddingTop = "";
+    }
 
     listSection.classList.remove("hidden");
     listSection.classList.add("flex");
