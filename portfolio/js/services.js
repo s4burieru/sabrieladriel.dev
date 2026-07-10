@@ -15,6 +15,8 @@
     ],
     accent: "rgba(59, 130, 246, 0.18)",
     accentGlow: "rgba(96, 165, 250, 0.34)",
+    textColor: "text-blue-300",
+    textColorStrong: "text-blue-400",
     content: `
       <!-- Overview -->
       <div class="mb-14">
@@ -176,6 +178,8 @@
     ],
     accent: "rgba(14, 165, 233, 0.18)",
     accentGlow: "rgba(34, 211, 238, 0.30)",
+    textColor: "text-cyan-300",
+    textColorStrong: "text-cyan-400",
     content: `
       <!-- Overview -->
       <div class="mb-14">
@@ -282,6 +286,8 @@
     ],
     accent: "rgba(236, 72, 153, 0.18)",
     accentGlow: "rgba(251, 146, 60, 0.26)",
+    textColor: "text-pink-300",
+    textColorStrong: "text-pink-400",
     content: `
       <!-- Overview -->
       <div class="mb-14">
@@ -385,6 +391,8 @@
     ],
     accent: "rgba(34, 197, 94, 0.16)",
     accentGlow: "rgba(74, 222, 128, 0.26)",
+    textColor: "text-green-300",
+    textColorStrong: "text-green-400",
     content: `
       <!-- Overview -->
       <div class="mb-14">
@@ -537,7 +545,7 @@ function buildDetailShell(data) {
           </span>
           <div class="space-y-4">
             <h3 class="text-3xl sm:text-4xl font-bold text-white">${data.title}</h3>
-            <p class="text-blue-300 text-lg font-semibold">${data.heroDesc}</p>
+            <p class="${data.textColor} text-lg font-semibold">${data.heroDesc}</p>
             <p class="text-gray-400 leading-relaxed">${data.summary}</p>
           </div>
           <div class="flex flex-wrap gap-3">${highlightItems}</div>
@@ -555,7 +563,7 @@ function buildDetailShell(data) {
         </div>
         <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg sm:col-span-2">
           <div class="text-xs uppercase tracking-widest text-gray-500">Starting at</div>
-          <div class="mt-3 text-3xl font-bold text-blue-400">${data.startingAt}</div>
+          <div class="mt-3 text-3xl font-bold ${data.textColorStrong}">${data.startingAt}</div>
         </div>
       </div>
     </div>
