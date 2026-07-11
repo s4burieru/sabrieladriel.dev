@@ -1,4 +1,21 @@
-﻿const servicesData = {
+﻿// Exchange rate: 1 PHP ≈ 0.017 USD (roughly 58 PHP = 1 USD)
+const PHP_TO_USD_RATE = 0.01724;
+
+/**
+ * Extracts a numeric price from a PHP price string (e.g. "₱3,000+") and converts to USD.
+ * @param {string} phpStr - The PHP price string.
+ * @returns {string} Formatted USD price string with ~ prefix.
+ */
+function convertToUSD(phpStr) {
+  // Remove ₱, commas, + signs, and any non-numeric chars except decimal
+  const cleaned = phpStr.replace(/[₱,+\s]/g, "").trim();
+  const num = parseFloat(cleaned);
+  if (isNaN(num)) return "";
+  const usd = num * PHP_TO_USD_RATE;
+  return `~$${Math.round(usd)}`;
+}
+
+const servicesData = {
   "web-dev": {
     title: "Frontend Website Development",
     heroDesc: "Build fast, modern, responsive websites.",
@@ -132,7 +149,8 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
             <h3 class="text-xl font-bold mb-2">Starter</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-6">₱3,000+</p>
+            <p class="text-3xl font-bold text-blue-500 mb-1">₱3,000+</p>
+            <p class="text-sm text-gray-500 mb-5">~$52 USD</p>
             <ul class="space-y-3 text-gray-400 text-sm">
               <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1 Page</li>
               <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Responsive</li>
@@ -143,7 +161,8 @@
           <div class="p-8 rounded-2xl border border-blue-500/20 bg-linear-to-brfrom-blue-500/8o-transparent relative hover:border-blue-500/40 transition-all duration-300">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500 text-xs font-semibold text-white">Popular</div>
             <h3 class="text-xl font-bold mb-2">Business</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-6">₱8,000+</p>
+            <p class="text-3xl font-bold text-blue-500 mb-1">₱8,000+</p>
+            <p class="text-sm text-gray-500 mb-5">~$138 USD</p>
             <ul class="space-y-3 text-gray-400 text-sm">
               <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Up to 5 Pages</li>
               <li class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Responsive</li>
@@ -155,7 +174,8 @@
           </div>
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
             <h3 class="text-xl font-bold mb-2">Custom</h3>
-            <p class="text-3xl font-bold text-blue-500 mb-6">Starting at ₱15,000</p>
+            <p class="text-3xl font-bold text-blue-500 mb-1">Starting at ₱15,000</p>
+            <p class="text-sm text-gray-500 mb-5">~$259 USD</p>
             <p class="text-sm text-gray-400">For larger projects with custom requirements.</p>
           </div>
         </div>
@@ -237,18 +257,21 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
             <h3 class="text-xl font-bold mb-2">Social Graphics</h3>
-            <p class="text-3xl font-bold text-cyan-500 mb-4">₱500+</p>
+            <p class="text-3xl font-bold text-cyan-500 mb-1">₱500+</p>
+            <p class="text-sm text-gray-500 mb-4">~$9 USD</p>
             <p class="text-sm text-gray-400">Per design</p>
           </div>
           <div class="p-8 rounded-2xl border border-cyan-500/20 bg-linear-to-b from-cyan-500/8 to-transparent relative hover:border-cyan-500/40 transition-all duration-300">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-cyan-500 text-xs font-semibold text-white">Popular</div>
             <h3 class="text-xl font-bold mb-2">Branding Kit</h3>
-            <p class="text-3xl font-bold text-cyan-500 mb-4">₱2,500+</p>
+            <p class="text-3xl font-bold text-cyan-500 mb-1">₱2,500+</p>
+            <p class="text-sm text-gray-500 mb-4">~$43 USD</p>
             <p class="text-sm text-gray-400">Logo + Color Palette + Typography</p>
           </div>
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
             <h3 class="text-xl font-bold mb-2">UI Design</h3>
-            <p class="text-3xl font-bold text-cyan-500 mb-4">₱5,000+</p>
+            <p class="text-3xl font-bold text-cyan-500 mb-1">₱5,000+</p>
+            <p class="text-sm text-gray-500 mb-4">~$86 USD</p>
             <p class="text-sm text-gray-400">Landing page or app screens.</p>
           </div>
         </div>
@@ -341,13 +364,15 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
             <h3 class="text-xl font-bold mb-2">Short Form</h3>
-            <p class="text-3xl font-bold text-pink-500 mb-4">₱800+</p>
+            <p class="text-3xl font-bold text-pink-500 mb-1">₱800+</p>
+            <p class="text-sm text-gray-500 mb-4">~$14 USD</p>
             <p class="text-sm text-gray-400">Up to 60 seconds</p>
           </div>
           <div class="p-8 rounded-2xl border border-pink-500/20 bg-linear-to-b from-pink-500/8 to-transparent relative hover:border-pink-500/40 transition-all duration-300">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-pink-500 text-xs font-semibold text-white">Popular</div>
             <h3 class="text-xl font-bold mb-2">Long Form</h3>
-            <p class="text-3xl font-bold text-pink-500 mb-4">₱2,000+</p>
+            <p class="text-3xl font-bold text-pink-500 mb-1">₱2,000+</p>
+            <p class="text-sm text-gray-500 mb-4">~$34 USD</p>
             <p class="text-sm text-gray-400">5-15 minutes</p>
           </div>
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
@@ -457,18 +482,21 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
             <h3 class="text-xl font-bold mb-2">Basic Research</h3>
-            <p class="text-3xl font-bold text-green-500 mb-4">₱1,500+</p>
+            <p class="text-3xl font-bold text-green-500 mb-1">₱1,500+</p>
+            <p class="text-sm text-gray-500 mb-4">~$26 USD</p>
             <p class="text-sm text-gray-400">1 Target</p>
           </div>
           <div class="p-8 rounded-2xl border border-green-500/20 bg-linear-to-b from-green-500/8 to-transparent relative hover:border-green-500/40 transition-all duration-300">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-green-500 text-xs font-semibold text-white">Popular</div>
             <h3 class="text-xl font-bold mb-2">Company Research</h3>
-            <p class="text-3xl font-bold text-green-500 mb-4">₱3,500+</p>
+            <p class="text-3xl font-bold text-green-500 mb-1">₱3,500+</p>
+            <p class="text-sm text-gray-500 mb-4">~$60 USD</p>
             <p class="text-sm text-gray-400">Detailed company profile</p>
           </div>
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
             <h3 class="text-xl font-bold mb-2">Threat Intelligence</h3>
-            <p class="text-3xl font-bold text-green-500 mb-4">₱5,000+</p>
+            <p class="text-3xl font-bold text-green-500 mb-1">₱5,000+</p>
+            <p class="text-sm text-gray-500 mb-4">~$86 USD</p>
             <p class="text-sm text-gray-400">Cyber threat report</p>
           </div>
         </div>
@@ -529,6 +557,8 @@ function buildDetailShell(data) {
     )
     .join("");
 
+  const usdPrice = convertToUSD(data.startingAt);
+
   return `
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
       <div
@@ -564,6 +594,7 @@ function buildDetailShell(data) {
         <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg sm:col-span-2">
           <div class="text-xs uppercase tracking-widest text-gray-500">Starting at</div>
           <div class="mt-3 text-3xl font-bold ${data.textColorStrong}">${data.startingAt}</div>
+          ${usdPrice ? `<div class="mt-1 text-sm text-gray-500">${usdPrice} USD</div>` : ""}
         </div>
       </div>
     </div>
