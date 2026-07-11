@@ -935,6 +935,13 @@
     }
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .from-blue-500\/8 {
+    --tw-gradient-from: color-mix(in srgb, oklch(62.3% 0.214 259.815) 8%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-from: color-mix(in oklab, var(--color-blue-500) 8%, transparent);
+    }
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .from-blue-500\/10 {
     --tw-gradient-from: color-mix(in srgb, oklch(62.3% 0.214 259.815) 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {

@@ -32,7 +32,7 @@ const servicesData = {
     ],
     accent: "rgba(59, 130, 246, 0.18)",
     accentGlow: "rgba(96, 165, 250, 0.34)",
-    textColor: "text-blue-300",
+    textColor: "text-blue-400",
     textColorStrong: "text-blue-400",
     content: `
       <!-- Overview -->
@@ -50,13 +50,13 @@ const servicesData = {
                 <h3 class="text-xl font-bold">Perfect For</h3>
               </div>
               <ul class="space-y-3 text-gray-400">
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Small businesses</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Small Businesses</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Students</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Startups</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Personal brands</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Resorts</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Tourism websites</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Local organizations</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Freelancers</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Personal Brands</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Organizations</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Agencies</li>
               </ul>
             </div>
           </div>
@@ -76,29 +76,11 @@ const servicesData = {
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Website Redesign</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Frontend Development</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Basic SEO Setup</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Performance Optimization</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> UI Implementation</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span> Deployment Assistance</li>
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Technologies -->
-      <div class="mb-14">
-        <div class="flex items-center gap-3 mb-7">
-          <span class="w-1 h-7 bg-blue-500 rounded-full shrink-0"></span>
-          <h2 class="text-2xl font-bold">Technologies</h2>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">HTML5</span>
-          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">CSS3</span>
-          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">JavaScript</span>
-          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">Tailwind CSS</span>
-          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">React (Basic)</span>
-          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">Git & GitHub</span>
-          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">Vercel</span>
-          <span class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300">Netlify</span>
         </div>
       </div>
 
@@ -159,8 +141,8 @@ const servicesData = {
             </ul>
           </div>
           <div class="p-8 rounded-2xl border border-blue-500/20 bg-linear-to-brfrom-blue-500/8o-transparent relative hover:border-blue-500/40 transition-all duration-300">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500 text-xs font-semibold text-white">Popular</div>
-            <h3 class="text-xl font-bold mb-2">Business</h3>
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500 text-xs font-semibold text-white">Recommended</div>
+            <h3 class="text-xl font-bold mb-2">Professional</h3>
             <p class="text-3xl font-bold text-blue-500 mb-1">₱8,000+</p>
             <p class="text-sm text-gray-500 mb-5">~$138 USD</p>
             <ul class="space-y-3 text-gray-400 text-sm">
@@ -173,7 +155,7 @@ const servicesData = {
             </ul>
           </div>
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
-            <h3 class="text-xl font-bold mb-2">Custom</h3>
+            <h3 class="text-xl font-bold mb-2">Premium</h3>
             <p class="text-3xl font-bold text-blue-500 mb-1">Starting at ₱15,000</p>
             <p class="text-sm text-gray-500 mb-5">~$259 USD</p>
             <p class="text-sm text-gray-400">For larger projects with custom requirements.</p>
@@ -198,7 +180,7 @@ const servicesData = {
     ],
     accent: "rgba(14, 165, 233, 0.18)",
     accentGlow: "rgba(34, 211, 238, 0.30)",
-    textColor: "text-cyan-300",
+    textColor: "text-cyan-400",
     textColorStrong: "text-cyan-400",
     content: `
       <!-- Overview -->
@@ -261,7 +243,7 @@ const servicesData = {
             <p class="text-sm text-gray-400">Per design</p>
           </div>
           <div class="p-8 rounded-2xl border border-cyan-500/20 bg-linear-to-b from-cyan-500/8 to-transparent relative hover:border-cyan-500/40 transition-all duration-300">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-cyan-500 text-xs font-semibold text-white">Popular</div>
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-cyan-500 text-xs font-semibold text-white">Essentials</div>
             <h3 class="text-xl font-bold mb-2">Branding Kit</h3>
             <p class="text-3xl font-bold text-cyan-500 mb-1">₱2,500+</p>
             <p class="text-sm text-gray-500 mb-4">~$43 USD</p>
@@ -308,7 +290,7 @@ const servicesData = {
     ],
     accent: "rgba(236, 72, 153, 0.18)",
     accentGlow: "rgba(251, 146, 60, 0.26)",
-    textColor: "text-pink-300",
+    textColor: "text-pink-400",
     textColorStrong: "text-pink-400",
     content: `
       <!-- Overview -->
@@ -366,7 +348,7 @@ const servicesData = {
             <p class="text-sm text-gray-400">Up to 60 seconds</p>
           </div>
           <div class="p-8 rounded-2xl border border-pink-500/20 bg-linear-to-b from-pink-500/8 to-transparent relative hover:border-pink-500/40 transition-all duration-300">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-pink-500 text-xs font-semibold text-white">Popular</div>
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-pink-500 text-xs font-semibold text-white">Ideal for YouTube</div>
             <h3 class="text-xl font-bold mb-2">Long Form</h3>
             <p class="text-3xl font-bold text-pink-500 mb-1">₱2,000+</p>
             <p class="text-sm text-gray-500 mb-4">~$34 USD</p>
@@ -413,7 +395,7 @@ const servicesData = {
     ],
     accent: "rgba(34, 197, 94, 0.16)",
     accentGlow: "rgba(74, 222, 128, 0.26)",
-    textColor: "text-green-300",
+    textColor: "text-green-400",
     textColorStrong: "text-green-400",
     content: `
       <!-- Overview -->
@@ -484,7 +466,7 @@ const servicesData = {
             <p class="text-sm text-gray-400">1 Target</p>
           </div>
           <div class="p-8 rounded-2xl border border-green-500/20 bg-linear-to-b from-green-500/8 to-transparent relative hover:border-green-500/40 transition-all duration-300">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-green-500 text-xs font-semibold text-white">Popular</div>
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-green-500 text-xs font-semibold text-white">Business Focus</div>
             <h3 class="text-xl font-bold mb-2">Company Research</h3>
             <p class="text-3xl font-bold text-green-500 mb-1">₱3,500+</p>
             <p class="text-sm text-gray-500 mb-4">~$60 USD</p>
