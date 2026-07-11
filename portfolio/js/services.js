@@ -241,7 +241,6 @@ const servicesData = {
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Figma</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Adobe Photoshop</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Canva</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0"></span> Illustrator (if applicable)</li>
               </ul>
             </div>
           </div>
@@ -347,8 +346,6 @@ const servicesData = {
               </div>
               <ul class="space-y-3 text-gray-400">
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> CapCut</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> Adobe Premiere Pro (if applicable)</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full shrink-0"></span> After Effects (if applicable)</li>
               </ul>
             </div>
           </div>
@@ -624,7 +621,7 @@ function handleRouting() {
     listSection.classList.remove("flex");
     detailSection.classList.remove("hidden");
     detailSection.classList.add("flex");
-    detailSection.style.paddingTop = "clamp(100px, 14vw, 160px)";
+    detailSection.style.paddingTop = "clamp(60px, 8vw, 100px)";
 
     // Hide extra sections
     if (whyMeSection) {
