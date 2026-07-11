@@ -22,9 +22,6 @@ const servicesData = {
     badge: "Frontend Development",
     summary:
       "Responsive websites built with a clear process, polished visuals, and a focus on launch-ready results.",
-    fit: "Landing pages, portfolios, and business sites.",
-    outcome: "A fast, trustworthy site that works well on every screen.",
-    startingAt: "₱3,000+",
     highlights: [
       "Responsive Web Design",
       "Performance Optimization",
@@ -170,9 +167,6 @@ const servicesData = {
     badge: "Creative Design",
     summary:
       "Clean visual systems and branded assets that keep your content consistent across platforms.",
-    fit: "Creators, brands, and client-facing visuals.",
-    outcome: "A cohesive look that feels modern and easy to scale.",
-    startingAt: "₱500+",
     highlights: [
       "UI/UX Prototyping",
       "Branding Design",
@@ -280,9 +274,6 @@ const servicesData = {
     badge: "Content Editing",
     summary:
       "Tighter pacing, cleaner storytelling, and motion-ready edits for short and long-form video.",
-    fit: "Social content, promos, and school projects.",
-    outcome: "A sharper edit that holds attention and feels polished.",
-    startingAt: "₱800+",
     highlights: [
       "Content Creation Editing",
       "Color Correction",
@@ -385,9 +376,6 @@ const servicesData = {
     badge: "Research & Analysis",
     summary:
       "Ethical public-source research that turns scattered data into structured findings and recommendations.",
-    fit: "Due diligence, verification, and digital footprint analysis.",
-    outcome: "A structured report with evidence, citations, and next steps.",
-    startingAt: "₱1,500+",
     highlights: [
       "Fact-Checking",
       "Digital Footprint Analysis",
@@ -536,10 +524,8 @@ function buildDetailShell(data) {
     )
     .join("");
 
-  const usdPrice = convertToUSD(data.startingAt);
-
   return `
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+    <div class="grid grid-cols-1 gap-6 mb-10">
       <div
         class="relative overflow-hidden rounded-2xl border border-white/10 p-8 sm:p-10"
         style="background: linear-gradient(135deg, ${data.accent} 0%, rgba(255, 255, 255, 0.05) 48%, rgba(10, 10, 10, 0.96) 100%);"
@@ -558,22 +544,6 @@ function buildDetailShell(data) {
             <p class="text-gray-400 leading-relaxed">${data.summary}</p>
           </div>
           <div class="flex flex-wrap gap-3">${highlightItems}</div>
-        </div>
-      </div>
-
-      <div class="grid gap-4 sm:grid-cols-2">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg">
-          <div class="text-xs uppercase tracking-widest text-gray-500">Best fit</div>
-          <div class="mt-3 text-lg font-semibold text-white leading-relaxed">${data.fit}</div>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg">
-          <div class="text-xs uppercase tracking-widest text-gray-500">Typical outcome</div>
-          <div class="mt-3 text-lg font-semibold text-white leading-relaxed">${data.outcome}</div>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg sm:col-span-2">
-          <div class="text-xs uppercase tracking-widest text-gray-500">Starting at</div>
-          <div class="mt-3 text-3xl font-bold ${data.textColorStrong}">${data.startingAt}</div>
-          ${usdPrice ? `<div class="mt-1 text-sm text-gray-500">${usdPrice} USD</div>` : ""}
         </div>
       </div>
     </div>
