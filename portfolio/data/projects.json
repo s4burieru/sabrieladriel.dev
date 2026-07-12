@@ -83,5 +83,15 @@
     "source": "https://drive.google.com/file/d/1c6rKiEzNmkRtZdIBIoPdqSLbH_B5eVr2/view?usp=drive_link",
     "category": ["video editing"],
     "technologies": ["CapCut"]
+  },
+  {
+    "id": 9,
+    "title": "DJ Levi Shorts",
+    "description": "A collection of short-form reels edited for DJ Levi featuring live gigs, energetic crowd moments, and cinematic cuts, enhanced with POV-style narratives and bold captions optimized for social media.",
+    "thumbnail": "./assets/works-thumbnails/dj-levi-thumbnail.png",
+    "website": "#",
+    "source": "https://drive.google.com/drive/folders/17Xy26FEGcaX1WnkJUiFYarZzqi19ctf-?usp=sharing",
+    "category": ["video editing"],
+    "technologies": ["CapCut"]
   }
 ]
