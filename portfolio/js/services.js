@@ -375,11 +375,11 @@ const servicesData = {
     heroDesc: "Open-Source Intelligence & Digital Research",
     badge: "Research & Analysis",
     summary:
-      "Ethical public-source research that turns scattered data into structured findings and recommendations.",
+      "Ethical research using publicly available information to gather, verify, and organize digital evidence into structured reports.",
     highlights: [
-      "Fact-Checking",
       "Digital Footprint Analysis",
-      "Risk Assessment",
+      "Fact Checking",
+      "Public Source Research",
     ],
     accent: "rgba(34, 197, 94, 0.16)",
     accentGlow: "rgba(74, 222, 128, 0.26)",
@@ -401,18 +401,18 @@ const servicesData = {
                 <h3 class="text-xl font-bold">Services</h3>
               </div>
               <ul class="space-y-3 text-gray-400">
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Digital Footprint Analysis</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Username Investigation</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Public Digital Footprint Analysis</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Email Enumeration (Public Sources Only)</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Domain Research</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Company Research</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Brand Monitoring</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Social Media Analysis</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Threat Intelligence Research</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Executive Profiling</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Due Diligence Research</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Basic Geolocation Analysis</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Domain & WHOIS Research</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Company Background Research</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Brand Mention Monitoring</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Social Media Profile Research</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Website & Infrastructure Research</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Archive Research (Wayback Machine)</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Data Collection & Verification</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Timeline Creation</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Fact Checking</li>
               </ul>
             </div>
           </div>
@@ -424,16 +424,16 @@ const servicesData = {
                 <h3 class="text-xl font-bold">Tools</h3>
               </div>
               <ul class="space-y-3 text-gray-400">
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Maltego</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> SpiderFoot</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Google Advanced Search</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Google Dorking</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Maltego (Basic)</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> SpiderFoot (Basic)</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Shodan</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Have I Been Pwned</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Intelligence X</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> VirusTotal</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Intelligence X</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Have I Been Pwned</li>
                 <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Wayback Machine</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> WHOIS</li>
-                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Various public OSINT resources</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> WHOIS & DNS Lookup</li>
               </ul>
             </div>
           </div>
@@ -448,23 +448,23 @@ const servicesData = {
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
-            <h3 class="text-xl font-bold mb-2">Basic Research</h3>
+            <h3 class="text-xl font-bold mb-2">Basic OSINT Research</h3>
             <p class="text-3xl font-bold text-green-500 mb-1">₱1,500+</p>
             <p class="text-sm text-gray-500 mb-4">~$26 USD</p>
-            <p class="text-sm text-gray-400">1 Target</p>
+            <p class="text-sm text-gray-400">1 investigation target</p>
           </div>
           <div class="p-8 rounded-2xl border border-green-500/20 bg-linear-to-b from-green-500/8 to-transparent relative hover:border-green-500/40 transition-all duration-300">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-green-500 text-xs font-semibold text-white">Business Focus</div>
-            <h3 class="text-xl font-bold mb-2">Company Research</h3>
-            <p class="text-3xl font-bold text-green-500 mb-1">₱3,500+</p>
-            <p class="text-sm text-gray-500 mb-4">~$60 USD</p>
-            <p class="text-sm text-gray-400">Detailed company profile</p>
+            <h3 class="text-xl font-bold mb-2">Business Research</h3>
+            <p class="text-3xl font-bold text-green-500 mb-1">₱3,000+</p>
+            <p class="text-sm text-gray-500 mb-4">~$52 USD</p>
+            <p class="text-sm text-gray-400">Company & domain research</p>
           </div>
           <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
-            <h3 class="text-xl font-bold mb-2">Threat Intelligence</h3>
-            <p class="text-3xl font-bold text-green-500 mb-1">₱5,000+</p>
-            <p class="text-sm text-gray-500 mb-4">~$86 USD</p>
-            <p class="text-sm text-gray-400">Cyber threat report</p>
+            <h3 class="text-xl font-bold mb-2">Custom Research</h3>
+            <p class="text-3xl font-bold text-green-500 mb-1">₱4,500+</p>
+            <p class="text-sm text-gray-500 mb-4">~$78 USD</p>
+            <p class="text-sm text-gray-400">Custom investigation scope</p>
           </div>
         </div>
       </div>
@@ -481,12 +481,12 @@ const servicesData = {
             <ul class="space-y-3 text-gray-400">
               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Professional PDF Report</li>
               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Executive Summary</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Timeline</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Investigation Methodology</li>
               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Evidence Links</li>
               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Screenshots</li>
               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Source Citations</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Risk Assessment</li>
-              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Recommendations</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Timeline (When Applicable)</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span> Findings & Recommendations</li>
             </ul>
           </div>
         </div>
@@ -498,7 +498,7 @@ const servicesData = {
               <h3 class="text-xl font-bold">Important Notice</h3>
             </div>
             <p class="text-gray-400 leading-relaxed text-sm">
-              I only conduct investigations using legally accessible public information (OSINT). I do not hack accounts, bypass security measures, access private information without authorization, or engage in activities that violate laws or platform terms of service.
+              I conduct investigations exclusively using legally accessible public information (OSINT). I do not hack accounts, bypass authentication, access private databases, purchase leaked information, or perform activities that violate laws or platform terms of service. Every investigation follows ethical OSINT practices with proper documentation and source attribution.
             </p>
           </div>
         </div>
