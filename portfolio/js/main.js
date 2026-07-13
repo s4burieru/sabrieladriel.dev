@@ -236,7 +236,7 @@ const roles = [
   "UI/UX Designer",
   "Graphic Designer",
   "Video Editor",
-  "OSINT Investigator",
+  "OSINT Researcher",
   "Cybersecurity Enthusiast",
 ];
 
