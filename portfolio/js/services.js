@@ -371,8 +371,8 @@ const servicesData = {
     `,
   },
   osint: {
-    title: "OSINT Investigation",
-    heroDesc: "Open-Source Intelligence & Digital Research",
+    title: "Open-Source Intelligence",
+    heroDesc: "Digital Research & Analysis",
     badge: "Research & Analysis",
     summary:
       "Ethical research using publicly available information to gather, verify, and organize digital evidence into structured reports.",
