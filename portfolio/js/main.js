@@ -91,7 +91,7 @@ function initializeNavbar() {
         <a href="services.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2">Services</a>
         <a href="blog.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2">Blog</a>
         <a href="contact.html" class="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2">Contact</a>
-        <a href="#resume" class="font-poppins text-sm font-semibold px-4 py-2 rounded-full bg-white text-black hover:bg-blue-50 transition-colors duration-200 text-center">Resume</a>
+        <a href="./assets/sabriel-adriel-san-agustin-cv.pdf" target="_blank" rel="noopener noreferrer" class="font-poppins text-sm font-semibold px-4 py-2 rounded-full bg-white text-black hover:bg-blue-50 transition-colors duration-200 text-center">Resumé</a>
       </div>
     `;
     const nav = document.querySelector("nav");
