@@ -131,6 +131,42 @@ async function renderAllProjects() {
   }
 }
 
+// ===== Touch device tap-to-hover for project cards =====
+function initProjectCardTap() {
+  // Only run on touch-capable devices
+  if (!("ontouchstart" in window) && !navigator.maxTouchPoints > 0) return;
+
+  const containers = [
+    document.getElementById("featured-projects-container"),
+    document.getElementById("projects-container"),
+  ].filter(Boolean);
+
+  containers.forEach((container) => {
+    if (!container) return;
+
+    container.addEventListener("click", (e) => {
+      // Find the closest project card (.group) from the click target
+      const card = e.target.closest(".group");
+      if (!card) return;
+
+      // If the click was on a link/button inside the card, let it pass through
+      if (e.target.closest("a")) return;
+
+      e.preventDefault();
+
+      // Close any other open cards in this container
+      container.querySelectorAll(".group.tapped").forEach((openCard) => {
+        if (openCard !== card) {
+          openCard.classList.remove("tapped");
+        }
+      });
+
+      // Toggle tapped state on this card
+      card.classList.toggle("tapped");
+    });
+  });
+}
+
 // Initialize on page load
 document.addEventListener("DOMContentLoaded", function () {
   // Load featured projects if on homepage
@@ -142,4 +178,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("projects-container")) {
     renderAllProjects();
   }
+
+  // Initialize tap-to-hover for touch devices
+  // Use a small delay to ensure cards are rendered
+  setTimeout(initProjectCardTap, 200);
 });

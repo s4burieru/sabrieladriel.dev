@@ -145,3 +145,32 @@ html, body {
     gap: 0.3rem !important;
   }
 }
+
+/* ===== Touch device tap-to-hover for project cards ===== */
+/* Replicate group-hover effects when .tapped class is added via JS */
+
+/* Card border and background on tap */
+.group.tapped {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Thumbnail overlay on tap */
+.group.tapped .absolute.inset-0 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Image scale on tap */
+.group.tapped img {
+  transform: scale(1.05) !important;
+}
+
+/* Project link buttons visibility on tap */
+.group.tapped .absolute.top-3 {
+  opacity: 1 !important;
+}
+
+/* Title color on tap */
+.group.tapped h3 {
+  color: #2563eb !important;
+}
