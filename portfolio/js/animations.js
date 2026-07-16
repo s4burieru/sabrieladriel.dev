@@ -11,7 +11,7 @@ function initHeroAnimations() {
     [
       heroSection.querySelector(".inline-block"),
       heroSection.querySelector("h1"),
-      heroSection.querySelector(".text-2xl"),
+      heroSection.querySelector("#role-text")?.closest("div") || heroSection.querySelector(".text-xl, .text-2xl"),
       heroSection.querySelector("p.text-gray-400"),
       heroSection.querySelector(".flex.flex-col.sm\\:flex-row"),
       heroSection.querySelector(".flex.flex-col.items-center"),
@@ -53,7 +53,7 @@ function initHeroAnimations() {
   }
 
   // Animate role text
-  const roleDiv = heroSection.querySelector(".text-2xl");
+  const roleDiv = heroSection.querySelector("#role-text")?.closest("div") || heroSection.querySelector(".text-xl, .text-2xl");
   if (roleDiv) {
     timeline.from(
       roleDiv,
@@ -213,7 +213,7 @@ function initScrollAnimations() {
       scrollTrigger: {
         trigger: heading,
         start: "top 80%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
       duration: 0.8,
       opacity: 0,
@@ -228,7 +228,7 @@ function initScrollAnimations() {
 
   allCards.forEach((card) => {
     // Keep the services section static; only the rest of the site gets hover lift.
-    if (card.closest("#detailed-services")) {di
+    if (card.closest("#detailed-services")) {
       return;
     }
 
@@ -270,7 +270,7 @@ function initScrollAnimations() {
       scrollTrigger: {
         trigger: card,
         start: "top 90%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
       duration: 0.6,
       opacity: 0,
@@ -303,11 +303,15 @@ function initScrollAnimations() {
 
 // Main initialization
 document.addEventListener("DOMContentLoaded", () => {
+  // Run hero animations immediately (no timeout) to prevent flash
+  initHeroAnimations();
+  initProfileImageAnimation();
+  // Delay scroll-triggered animations slightly to ensure layout is stable
   setTimeout(() => {
-    initHeroAnimations();
-    initProfileImageAnimation();
     initScrollAnimations();
-  }, 50);
+    // Refresh ScrollTrigger after initialization
+    ScrollTrigger.refresh();
+  }, 100);
 });
 
 // Refresh ScrollTrigger on load
