@@ -141,7 +141,7 @@ function reinitializeScripts() {
     }
   }
   
-  if (path.includes('/projects') || path.includes('/index')) {
+  if (path === '/' || path.includes('/projects') || path.includes('/index')) {
     if (typeof renderFeaturedProjects === 'function') {
       renderFeaturedProjects();
     }
