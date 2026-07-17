@@ -297,7 +297,7 @@ function handlePopState(e) {
 }
 
 // Handle initial page load - check if we need to route
-function handleInitialLoad() {
+async function handleInitialLoad() {
   const path = window.location.pathname;
   const filename = path.split('/').pop() || '';
   
@@ -308,10 +308,25 @@ function handleInitialLoad() {
     return;
   }
   
-  // If the URL is clean (no .html), we need to load the right content
-  // But since the server already served the right page, we just set the state
-  const cleanPath = path;
-  history.replaceState({ path: cleanPath }, '', cleanPath);
+  // Set the initial history state
+  history.replaceState({ path: path }, '', path);
+  
+  // If we're not on the homepage and the URL is clean (no .html),
+  // the server served index.html as SPA fallback.
+  // We need to fetch the actual page content and swap it in.
+  if (path !== '/') {
+    const htmlPath = cleanPathToHtml(path);
+    const html = await loadPageContent(htmlPath);
+    if (html) {
+      updatePageTitle(html);
+      const mainContent = extractMainContent(html);
+      const currentContentWrapper = document.querySelector('.relative.z-10, .relative.z-20.flex-1');
+      if (currentContentWrapper) {
+        currentContentWrapper.innerHTML = mainContent;
+      }
+      reinitializeScripts();
+    }
+  }
 }
 
 // Initialize the router

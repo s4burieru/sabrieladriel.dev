@@ -1,28 +1,30 @@
 {
-  "name": "sabriel-adriel-freelance-portfolio",
+  "name": "sabrieladriel.dev",
   "version": "1.0.0",
   "description": "��#\u0000 \u0000s\u0000a\u0000b\u0000r\u0000i\u0000e\u0000l\u0000a\u0000d\u0000r\u0000i\u0000e\u0000l\u0000-\u0000f\u0000r\u0000e\u0000e\u0000l\u0000a\u0000n\u0000c\u0000e\u0000-\u0000p\u0000o\u0000r\u0000t\u0000f\u0000o\u0000l\u0000i\u0000o\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "bt": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
     "watch": "tailwindcss -i portfolio/css/input.css -o portfolio/css/output.css --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s4burieru/sabrieladriel-freelance-portfolio.git"
+    "url": "git+https://github.com/s4burieru/sabrieladriel.dev.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/s4burieru/sabrieladriel-freelance-portfolio/issues"
+    "url": "https://github.com/s4burieru/sabrieladriel.dev/issues"
   },
-  "homepage": "https://github.com/s4burieru/sabrieladriel-freelance-portfolio#readme",
+  "homepage": "https://github.com/s4burieru/sabrieladriel.dev#readme",
   "dependencies": {
     "@tailwindcss/cli": "^4.2.1"
   },
   "devDependencies": {
-    "tailwindcss": "^4.2.1"
+    "tailwindcss": "^4.2.1",
+    "vite": "^8.1.5"
   }
 }
