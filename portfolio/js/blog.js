@@ -24,7 +24,7 @@ async function renderSingleBlogPost() {
   const post = posts.find((p) => p.id === postId);
 
   if (!post) {
-    window.location.href = "blog.html";
+    window.location.href = "/blog";
     return;
   }
 
@@ -105,7 +105,7 @@ async function renderFeaturedBlogPosts() {
     .slice(0, 3)
     .map(
       (post) => `
-    <a href="blog.html?id=${post.id}" class="group flex flex-col h-full min-h-110 sm:min-h-120 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-lg overflow-hidden hover:border-white/30 hover:bg-white/10 transition">
+    <a href="/blog?id=${post.id}" class="group flex flex-col h-full min-h-110 sm:min-h-120 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-lg overflow-hidden hover:border-white/30 hover:bg-white/10 transition">
       <!-- Thumbnail Aspect Ratio (16:9) -->
       <div class="relative w-full aspect-video rounded-none overflow-hidden group-hover:border-white/50 transition">
         <img 
@@ -165,7 +165,7 @@ async function renderAllBlogPosts() {
   container.innerHTML = posts
     .map(
       (post) => `
-    <a href="blog.html?id=${post.id}" class="group flex flex-col h-full min-h-110 sm:min-h-120 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-lg overflow-hidden hover:border-white/30 hover:bg-white/10 transition">
+    <a href="/blog?id=${post.id}" class="group flex flex-col h-full min-h-110 sm:min-h-120 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-lg overflow-hidden hover:border-white/30 hover:bg-white/10 transition">
       <!-- Thumbnail Aspect Ratio (16:9) -->
       <div class="relative w-full aspect-video rounded-none overflow-hidden group-hover:border-white/50 transition">
         <img 

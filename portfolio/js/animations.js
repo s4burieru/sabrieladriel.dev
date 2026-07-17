@@ -260,7 +260,7 @@ function initScrollAnimations() {
     if (
       card.tagName === "A" &&
       card.href &&
-      card.href.includes("services.html?service=")
+      card.href.includes("/services?service=")
     ) {
       return;
     }
@@ -276,25 +276,9 @@ function initScrollAnimations() {
       opacity: 0,
       y: 20,
       ease: "power2.out",
+      clearProps: "transform",
     });
 
-    // Add hover animation
-    card.addEventListener("mouseenter", () => {
-      gsap.to(card, {
-        duration: 0.3,
-        y: -8,
-        boxShadow: "0 8px 24px rgba(255, 255, 255, 0.1)",
-        overwrite: "auto",
-      });
-    });
-    card.addEventListener("mouseleave", () => {
-      gsap.to(card, {
-        duration: 0.3,
-        y: 0,
-        boxShadow: "none",
-        overwrite: "auto",
-      });
-    });
   });
 }
 
