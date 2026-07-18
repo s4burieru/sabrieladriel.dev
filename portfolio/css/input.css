@@ -149,6 +149,15 @@ html, body {
 /* ===== Touch device tap-to-hover for project cards ===== */
 /* Replicate group-hover effects when .tapped class is added via JS */
 
+/* Hero CTA buttons: keep them visually static on hover/focus */
+#hero .hero-cta-no-hover,
+#hero .hero-cta-no-hover:hover,
+#hero .hero-cta-no-hover:focus,
+#hero .hero-cta-no-hover:active {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 /* Card border and background on tap */
 .group.tapped {
   border-color: rgba(255, 255, 255, 0.3) !important;

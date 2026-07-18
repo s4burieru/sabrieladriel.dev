@@ -507,14 +507,19 @@ const servicesData = {
   },
 };
 
-// Cache DOM elements for performance
-const listSection = document.getElementById("detailed-services");
-const detailSection = document.getElementById("service-detail");
-const whyMeSection = document.getElementById("why-me-section");
-const ctaSection = document.getElementById("cta-section");
-const heroTitle = document.getElementById("hero-title");
-const heroDesc = document.getElementById("hero-desc");
-const detailContent = document.getElementById("detail-content");
+// Resolve DOM elements lazily because the router swaps page content in place.
+// Caching them once at startup would leave us with stale nodes after navigation.
+function getServicePageElements() {
+  return {
+    listSection: document.getElementById("detailed-services"),
+    detailSection: document.getElementById("service-detail"),
+    whyMeSection: document.getElementById("why-me-section"),
+    ctaSection: document.getElementById("cta-section"),
+    heroTitle: document.getElementById("hero-title"),
+    heroDesc: document.getElementById("hero-desc"),
+    detailContent: document.getElementById("detail-content"),
+  };
+}
 
 function buildDetailShell(data) {
   const highlightItems = data.highlights
@@ -551,6 +556,20 @@ function buildDetailShell(data) {
 }
 
 function handleRouting() {
+  const {
+    listSection,
+    detailSection,
+    whyMeSection,
+    ctaSection,
+    heroTitle,
+    heroDesc,
+    detailContent,
+  } = getServicePageElements();
+
+  if (!listSection || !detailSection || !heroTitle || !heroDesc || !detailContent) {
+    return;
+  }
+
   const urlParams = new URLSearchParams(window.location.search);
   const serviceId = urlParams.get("service");
 
@@ -562,7 +581,7 @@ function handleRouting() {
     heroTitle.classList.add("hidden");
     heroDesc.textContent = "";
     heroDesc.classList.add("hidden");
-    heroSection = document.getElementById("services-hero");
+    const heroSection = document.getElementById("services-hero");
     if (heroSection) {
       heroSection.style.paddingTop = "0";
     }
@@ -593,7 +612,7 @@ function handleRouting() {
     heroDesc.textContent =
       "Delivering high-quality digital solutions tailored to your needs. Explore the services I offer to help your projects succeed.";
     heroDesc.classList.remove("hidden");
-    heroSection = document.getElementById("services-hero");
+    const heroSection = document.getElementById("services-hero");
     if (heroSection) {
       heroSection.style.paddingTop = "";
     }

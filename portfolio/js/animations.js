@@ -104,27 +104,6 @@ function initHeroAnimations() {
       },
       0.7,
     );
-
-    // Add hover animations to CTA buttons
-    const buttons = ctaContainer.querySelectorAll("a");
-    buttons.forEach((button) => {
-      button.addEventListener("mouseenter", () => {
-        gsap.to(button, {
-          duration: 0.3,
-          y: -5,
-          boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
-          overwrite: "auto",
-        });
-      });
-      button.addEventListener("mouseleave", () => {
-        gsap.to(button, {
-          duration: 0.3,
-          y: 0,
-          boxShadow: "none",
-          overwrite: "auto",
-        });
-      });
-    });
   }
 
   // Animate profile image with rotation
@@ -137,7 +116,6 @@ function initHeroAnimations() {
       {
         duration: 0.8,
         opacity: 0,
-        x: 50,
         rotation: -5,
         ease: "power2.out",
       },

@@ -2081,6 +2081,11 @@
       gap: calc(var(--spacing) * 16);
     }
   }
+  .md\:gap-20 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 20);
+    }
+  }
   .md\:p-7 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 7);
@@ -2246,6 +2251,11 @@
       width: calc(var(--spacing) * 96);
     }
   }
+  .lg\:gap-24 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 24);
+    }
+  }
   .lg\:pt-0 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 0);
@@ -2399,6 +2409,10 @@ html, body {
   #hero .flex-wrap {
     gap: 0.3rem !important;
   }
+}
+#hero .hero-cta-no-hover, #hero .hero-cta-no-hover:hover, #hero .hero-cta-no-hover:focus, #hero .hero-cta-no-hover:active {
+  transform: none !important;
+  box-shadow: none !important;
 }
 .group.tapped {
   border-color: rgba(255, 255, 255, 0.3) !important;

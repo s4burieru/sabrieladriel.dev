@@ -242,53 +242,96 @@ const roles = [
 let currentRoleIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
-const roleTextElement = document.getElementById("role-text");
+let typingTimeoutId = null;
 const typingSpeed = 100;
 const deletingSpeed = 50;
 const pauseBetweenRoles = 1500;
 
+function getRoleTextElement() {
+  return document.getElementById("role-text");
+}
+
+function stopTypingAnimation() {
+  if (typingTimeoutId !== null) {
+    clearTimeout(typingTimeoutId);
+    typingTimeoutId = null;
+  }
+}
+
+function resetTypingAnimation() {
+  stopTypingAnimation();
+  currentRoleIndex = 0;
+  currentCharIndex = 0;
+  isDeleting = false;
+
+  const roleTextElement = getRoleTextElement();
+  if (roleTextElement) {
+    roleTextElement.textContent = "";
+  }
+}
+
 function type() {
+  const roleTextElement = getRoleTextElement();
   if (!roleTextElement) {
+    stopTypingAnimation();
     return;
   }
 
   const currentRole = roles[currentRoleIndex];
 
   if (isDeleting) {
-    // Delete characters one by one
     currentCharIndex--;
   } else {
-    // Add characters one by one
     currentCharIndex++;
   }
 
-  // Update the text content
   roleTextElement.textContent = currentRole.substring(0, currentCharIndex);
 
-  let delay = typingSpeed;
+  let delay = isDeleting ? deletingSpeed : typingSpeed;
 
-  if (isDeleting) {
-    delay = deletingSpeed;
-  }
-
-  // If we've finished typing the current role
   if (!isDeleting && currentCharIndex === currentRole.length) {
     delay = pauseBetweenRoles;
     isDeleting = true;
-  }
-  // If we've finished deleting
-  else if (isDeleting && currentCharIndex === 0) {
+  } else if (isDeleting && currentCharIndex === 0) {
     isDeleting = false;
     currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-    delay = 500; // Small pause before typing the next role
+    delay = 500;
   }
 
-  setTimeout(type, delay);
+  stopTypingAnimation();
+  typingTimeoutId = setTimeout(type, delay);
 }
 
-// Start the typing animation when the page loads
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", type);
-} else {
+function startTypingAnimation() {
+  const roleTextElement = getRoleTextElement();
+  if (!roleTextElement) {
+    return;
+  }
+
+  resetTypingAnimation();
   type();
 }
+
+window.startTypingAnimation = startTypingAnimation;
+window.resetTypingAnimation = resetTypingAnimation;
+
+function handleTypingAnimationLifecycle() {
+  const roleTextElement = getRoleTextElement();
+  if (roleTextElement) {
+    startTypingAnimation();
+  } else {
+    stopTypingAnimation();
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", handleTypingAnimationLifecycle);
+} else {
+  handleTypingAnimationLifecycle();
+}
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    handleTypingAnimationLifecycle();
+  }
+});

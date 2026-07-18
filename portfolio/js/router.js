@@ -126,9 +126,15 @@ async function reinitializeScripts() {
     loadFooter();
   }
   
-  // Re-initialize page-specific functions based on current page
+  // Re-initialize page-specific functions based on the live DOM.
+  // The router swaps page content in place, so the URL path alone is not
+  // enough to know which sections are currently present.
   const path = window.location.pathname;
-  
+  const featuredProjectsContainer = document.getElementById('featured-projects-container');
+  const projectsContainer = document.getElementById('projects-container');
+  const blogPostsContainer = document.getElementById('blog-posts-container');
+  const allBlogPostsContainer = document.getElementById('all-blog-posts-container');
+
   if (path.includes('/about')) {
     if (typeof initializeInfiniteScroll === 'function') {
       setTimeout(() => {
@@ -138,26 +144,26 @@ async function reinitializeScripts() {
     }
   }
   
-  if (path === '/' || path.includes('/projects') || path.includes('/index')) {
+  if (featuredProjectsContainer || projectsContainer) {
     const renderTasks = [];
-    if (typeof renderFeaturedProjects === 'function') {
+    if (featuredProjectsContainer && typeof renderFeaturedProjects === 'function') {
       renderTasks.push(renderFeaturedProjects());
     }
-    if (typeof renderAllProjects === 'function') {
+    if (projectsContainer && typeof renderAllProjects === 'function') {
       renderTasks.push(renderAllProjects());
     }
     await Promise.all(renderTasks);
-    if (typeof initProjectCardTap === 'function') {
+    if ((featuredProjectsContainer || projectsContainer) && typeof initProjectCardTap === 'function') {
       setTimeout(initProjectCardTap, 200);
     }
   }
   
-  if (path === '/' || path.includes('/blog') || path.includes('/index')) {
+  if (blogPostsContainer || allBlogPostsContainer) {
     const renderTasks = [];
-    if (document.getElementById('blog-posts-container') && typeof renderFeaturedBlogPosts === 'function') {
+    if (blogPostsContainer && typeof renderFeaturedBlogPosts === 'function') {
       renderTasks.push(renderFeaturedBlogPosts());
     }
-    if (typeof renderAllBlogPosts === 'function') {
+    if (allBlogPostsContainer && typeof renderAllBlogPosts === 'function') {
       renderTasks.push(renderAllBlogPosts());
     }
     if (typeof renderSingleBlogPost === 'function') {
@@ -192,15 +198,8 @@ async function reinitializeScripts() {
   }
   
   // Re-initialize typing animation
-  if (typeof type === 'function') {
-    // Only restart if on homepage
-    if (document.getElementById('role-text')) {
-      // Reset typing animation variables
-      currentRoleIndex = 0;
-      currentCharIndex = 0;
-      isDeleting = false;
-      type();
-    }
+  if (typeof startTypingAnimation === 'function' && document.getElementById('role-text')) {
+    startTypingAnimation();
   }
 
   // Let any page-loaded listeners run after the DOM has been repopulated
