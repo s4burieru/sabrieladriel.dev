@@ -183,3 +183,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Use a small delay to ensure cards are rendered
   setTimeout(initProjectCardTap, 200);
 });
+
+window.addEventListener("pageshow", (event) => {
+  if (!event.persisted) return;
+
+  if (document.getElementById("featured-projects-container")) {
+    renderFeaturedProjects();
+  }
+
+  if (document.getElementById("projects-container")) {
+    renderAllProjects();
+  }
+
+  setTimeout(initProjectCardTap, 200);
+});

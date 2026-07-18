@@ -114,10 +114,7 @@ function updatePageTitle(html) {
 }
 
 // Re-initialize page-specific scripts after navigation
-function reinitializeScripts() {
-  // Dispatch a custom event that page-specific scripts can listen to
-  document.dispatchEvent(new CustomEvent('page-loaded'));
-  
+async function reinitializeScripts() {
   // Re-run DOMContentLoaded-like initializations
   // Re-initialize navbar
   if (typeof loadNavbar === 'function') {
@@ -142,30 +139,34 @@ function reinitializeScripts() {
   }
   
   if (path === '/' || path.includes('/projects') || path.includes('/index')) {
+    const renderTasks = [];
     if (typeof renderFeaturedProjects === 'function') {
-      renderFeaturedProjects();
+      renderTasks.push(renderFeaturedProjects());
     }
     if (typeof renderAllProjects === 'function') {
-      renderAllProjects();
+      renderTasks.push(renderAllProjects());
     }
+    await Promise.all(renderTasks);
     if (typeof initProjectCardTap === 'function') {
       setTimeout(initProjectCardTap, 200);
     }
   }
   
-  if (path.includes('/blog')) {
-    if (typeof renderFeaturedBlogPosts === 'function') {
-      renderFeaturedBlogPosts();
+  if (path === '/' || path.includes('/blog') || path.includes('/index')) {
+    const renderTasks = [];
+    if (document.getElementById('blog-posts-container') && typeof renderFeaturedBlogPosts === 'function') {
+      renderTasks.push(renderFeaturedBlogPosts());
     }
     if (typeof renderAllBlogPosts === 'function') {
-      renderAllBlogPosts();
+      renderTasks.push(renderAllBlogPosts());
     }
     if (typeof renderSingleBlogPost === 'function') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('id')) {
-        renderSingleBlogPost();
+        renderTasks.push(renderSingleBlogPost());
       }
     }
+    await Promise.all(renderTasks);
   }
   
   if (path.includes('/services')) {
@@ -182,12 +183,12 @@ function reinitializeScripts() {
     initProfileImageAnimation();
   }
   if (typeof initScrollAnimations === 'function') {
-    setTimeout(() => {
-      initScrollAnimations();
-      if (typeof ScrollTrigger !== 'undefined') {
-        ScrollTrigger.refresh();
-      }
-    }, 100);
+      setTimeout(() => {
+        initScrollAnimations();
+        if (typeof ScrollTrigger !== 'undefined') {
+          ScrollTrigger.refresh();
+        }
+      }, 100);
   }
   
   // Re-initialize typing animation
@@ -201,6 +202,9 @@ function reinitializeScripts() {
       type();
     }
   }
+
+  // Let any page-loaded listeners run after the DOM has been repopulated
+  document.dispatchEvent(new CustomEvent('page-loaded'));
 }
 
 // Navigate to a new page
@@ -324,7 +328,7 @@ async function handleInitialLoad() {
       if (currentContentWrapper) {
         currentContentWrapper.innerHTML = mainContent;
       }
-      reinitializeScripts();
+      await reinitializeScripts();
     }
   }
 }

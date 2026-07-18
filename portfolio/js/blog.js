@@ -235,3 +235,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+window.addEventListener("pageshow", (event) => {
+  if (!event.persisted) return;
+
+  const params = getUrlParams();
+  const postId = params.get("id");
+
+  if (postId) {
+    renderSingleBlogPost();
+    return;
+  }
+
+  if (document.getElementById("blog-posts-container")) {
+    renderFeaturedBlogPosts();
+  }
+
+  if (document.getElementById("all-blog-posts-container")) {
+    renderAllBlogPosts();
+  }
+});

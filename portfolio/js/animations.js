@@ -6,6 +6,16 @@ function initHeroAnimations() {
   const heroSection = document.getElementById("hero");
   if (!heroSection) return;
 
+  const heroCtaContainer = heroSection.querySelector(".flex.flex-col.sm\\:flex-row.gap-3");
+  const heroSocialContainer = heroSection.querySelector(".flex.gap-1\\.5, .flex.gap-2, .flex.gap-3");
+  const heroProfileBlock = heroSection.querySelector(".flex.flex-col.items-center.gap-4, .flex.flex-col.items-center.gap-8");
+
+  gsap.set([heroCtaContainer, heroSocialContainer, heroProfileBlock], {
+    opacity: 1,
+    y: 0,
+    x: 0,
+  });
+
   // Set initial state - Make sure everything is visible
   gsap.set(
     [
@@ -83,15 +93,12 @@ function initHeroAnimations() {
   }
 
   // Animate CTA buttons
-  const ctaContainer = heroSection.querySelector(
-    ".flex.flex-col.sm\\:flex-row.gap-4",
-  );
+  const ctaContainer = heroCtaContainer;
   if (ctaContainer) {
     timeline.from(
       ctaContainer,
       {
         duration: 0.8,
-        opacity: 0,
         y: 20,
         ease: "power2.out",
       },
@@ -139,13 +146,12 @@ function initHeroAnimations() {
   }
 
   // Animate social icons
-  const socialContainer = heroSection.querySelector(".flex.gap-2");
+  const socialContainer = heroSocialContainer;
   if (socialContainer) {
     timeline.from(
       socialContainer,
       {
         duration: 0.8,
-        opacity: 0,
         y: 20,
         ease: "power2.out",
       },
@@ -273,7 +279,6 @@ function initScrollAnimations() {
         toggleActions: "play none none none",
       },
       duration: 0.6,
-      opacity: 0,
       y: 20,
       ease: "power2.out",
       clearProps: "transform",
