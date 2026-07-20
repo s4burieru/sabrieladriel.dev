@@ -4,29 +4,23 @@
  * This router intercepts internal navigation clicks and uses the History API
  * to provide clean URLs without .html extensions.
  * 
- * It works by:
- * 1. Intercepting clicks on internal links
- * 2. Fetching the corresponding .html file
- * 3. Swapping the page content
- * 4. Updating the URL via history.pushState
- * 5. Handling browser back/forward via popstate
+ * Navbar and Footer are rendered by React (via portfolio/src/main.jsx).
  */
 
 // Map of clean URL paths to actual HTML files
 const PAGE_MAP = {
   '/': 'index.html',
   '/about': 'about.html',
-  '/projects': 'projects.html',
   '/services': 'services.html',
-  '/blog': 'blog.html',
   '/contact': 'contact.html',
 };
+
+// Pages that are standalone React apps (separate entry points) - need full page navigation
+const REACT_APP_PAGES = ['/about', '/projects', '/services', '/blog', '/contact'];
 
 // Get the base path for the site (works with GitHub Pages subdirectory)
 function getBasePath() {
   const path = window.location.pathname;
-  // If we're on a page like /portfolio/about, the base is /portfolio/
-  // If we're on /about, the base is /
   const possibleBase = path.substring(0, path.lastIndexOf('/') + 1);
   return possibleBase || '/';
 }
@@ -48,7 +42,7 @@ function cleanPathToHtml(cleanPath) {
     return base + PAGE_MAP[lookupKey];
   }
   
-  // Handle query parameters (e.g., /blog?id=1 or /services?service=web-dev)
+  // Handle query parameters
   const pathWithoutQuery = lookupKey.split('?')[0];
   if (PAGE_MAP[pathWithoutQuery]) {
     return base + PAGE_MAP[pathWithoutQuery];
@@ -56,23 +50,6 @@ function cleanPathToHtml(cleanPath) {
   
   // Fallback: try appending .html
   return base + cleanPath.replace(/^\//, '') + '.html';
-}
-
-// Convert an HTML file path to a clean URL
-function htmlToCleanPath(htmlPath) {
-  // Extract the filename from the path
-  const filename = htmlPath.split('/').pop() || htmlPath;
-  
-  // Find the matching clean URL
-  for (const [cleanUrl, htmlFile] of Object.entries(PAGE_MAP)) {
-    if (htmlFile === filename) {
-      // Preserve query parameters
-      const queryString = window.location.search;
-      return cleanUrl === '/' ? (queryString || '/') : cleanUrl + (queryString || '');
-    }
-  }
-  
-  return htmlPath;
 }
 
 // Load page content via fetch
@@ -88,12 +65,12 @@ async function loadPageContent(url) {
   }
 }
 
-// Extract the main content from a full HTML page
+// Extract the main content from a full HTML page (excluding navbar and footer containers)
 function extractMainContent(html) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   
-  // Get the content wrapper (the div with class containing "relative z-10" or "relative z-20")
+  // Get the content wrapper (the div with class containing "relative z-10" or "relative z-20 flex-1")
   const contentWrapper = doc.querySelector('.relative.z-10, .relative.z-20.flex-1');
   
   if (contentWrapper) {
@@ -113,27 +90,22 @@ function updatePageTitle(html) {
   }
 }
 
-// Re-initialize page-specific scripts after navigation
-async function reinitializeScripts() {
-  // Re-run DOMContentLoaded-like initializations
-  // Re-initialize navbar
-  if (typeof loadNavbar === 'function') {
-    loadNavbar();
+// Re-mount React components (navbar & footer) and re-initialize page scripts
+function reinitializeScripts() {
+  // Re-mount React navbar
+  if (typeof window.__mountReactNavbar === 'function') {
+    window.__mountReactNavbar();
   }
   
-  // Re-initialize footer
-  if (typeof loadFooter === 'function') {
-    loadFooter();
+  // Re-mount React footer
+  if (typeof window.__mountReactFooter === 'function') {
+    window.__mountReactFooter();
   }
   
-  // Re-initialize page-specific functions based on the live DOM.
-  // The router swaps page content in place, so the URL path alone is not
-  // enough to know which sections are currently present.
+  // Re-initialize page-specific functions based on the live DOM
   const path = window.location.pathname;
   const featuredProjectsContainer = document.getElementById('featured-projects-container');
   const projectsContainer = document.getElementById('projects-container');
-  const blogPostsContainer = document.getElementById('blog-posts-container');
-  const allBlogPostsContainer = document.getElementById('all-blog-posts-container');
 
   if (path.includes('/about')) {
     if (typeof initializeInfiniteScroll === 'function') {
@@ -152,27 +124,11 @@ async function reinitializeScripts() {
     if (projectsContainer && typeof renderAllProjects === 'function') {
       renderTasks.push(renderAllProjects());
     }
-    await Promise.all(renderTasks);
-    if ((featuredProjectsContainer || projectsContainer) && typeof initProjectCardTap === 'function') {
-      setTimeout(initProjectCardTap, 200);
-    }
-  }
-  
-  if (blogPostsContainer || allBlogPostsContainer) {
-    const renderTasks = [];
-    if (blogPostsContainer && typeof renderFeaturedBlogPosts === 'function') {
-      renderTasks.push(renderFeaturedBlogPosts());
-    }
-    if (allBlogPostsContainer && typeof renderAllBlogPosts === 'function') {
-      renderTasks.push(renderAllBlogPosts());
-    }
-    if (typeof renderSingleBlogPost === 'function') {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('id')) {
-        renderTasks.push(renderSingleBlogPost());
+    Promise.all(renderTasks).then(() => {
+      if ((featuredProjectsContainer || projectsContainer) && typeof initProjectCardTap === 'function') {
+        setTimeout(initProjectCardTap, 200);
       }
-    }
-    await Promise.all(renderTasks);
+    });
   }
   
   if (path.includes('/services')) {
@@ -216,6 +172,23 @@ async function navigateTo(url, pushState = true) {
   const cleanPath = urlObj.pathname;
   const queryString = urlObj.search;
   
+  // For React app pages, let React handle the navigation
+  if (REACT_APP_PAGES.includes(cleanPath) || cleanPath === '/blog') {
+    // Update the URL
+    if (pushState) {
+      const newUrl = cleanPath + queryString;
+      history.pushState({ path: newUrl }, '', newUrl);
+    }
+    
+    // Trigger React to re-render by dispatching a custom event
+    // React will pick up the new URL from window.location
+    window.dispatchEvent(new CustomEvent('react-route-change'));
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+    return;
+  }
+  
   // Convert clean path to HTML file
   const htmlPath = cleanPathToHtml(cleanPath + queryString);
   
@@ -247,7 +220,7 @@ async function navigateTo(url, pushState = true) {
   // Scroll to top
   window.scrollTo(0, 0);
   
-  // Re-initialize scripts
+  // Re-initialize scripts (React navbar/footer + page scripts)
   reinitializeScripts();
 }
 
@@ -313,6 +286,11 @@ async function handleInitialLoad() {
   
   // Set the initial history state
   history.replaceState({ path: path }, '', path);
+  
+  // Skip fetching for standalone React app pages - they handle their own rendering
+  if (REACT_APP_PAGES.includes(path)) {
+    return;
+  }
   
   // If we're not on the homepage and the URL is clean (no .html),
   // the server served index.html as SPA fallback.
