@@ -9,7 +9,7 @@ export default function BlogPage() {
 
   // Load blog posts on mount
   useEffect(() => {
-    fetch('./data/blog-posts.json')
+    fetch('/data/blog-posts.json')
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
@@ -113,11 +113,11 @@ export default function BlogPage() {
                   {/* Post Meta Info */}
                   <div className="flex flex-wrap items-center gap-4 mb-8 text-sm md:text-base text-gray-400">
                     <div className="flex items-center gap-2">
-                      <img src="./assets/icons/calendar.svg" alt="calendar" className="w-4 h-4" />
+                      <img src="/assets/icons/calendar.svg" alt="calendar" className="w-4 h-4" />
                       <span>{selectedPost.date}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <img src="./assets/icons/clock.svg" alt="clock" className="w-4 h-4" />
+                      <img src="/assets/icons/clock.svg" alt="clock" className="w-4 h-4" />
                       <span>{selectedPost.readTime} min read</span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -244,11 +244,11 @@ export default function BlogPage() {
                         {/* Post Meta Info */}
                         <div className="flex flex-wrap items-center gap-4 mb-4 text-xs sm:text-sm text-gray-400">
                           <div className="flex items-center gap-1">
-                            <img src="./assets/icons/calendar.svg" alt="calendar" className="w-4 h-4" />
+                            <img src="/assets/icons/calendar.svg" alt="calendar" className="w-4 h-4" />
                             <span>{post.date}</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <img src="./assets/icons/clock.svg" alt="clock" className="w-4 h-4" />
+                            <img src="/assets/icons/clock.svg" alt="clock" className="w-4 h-4" />
                             <span>{post.readTime} min read</span>
                           </div>
                         </div>

@@ -4,7 +4,7 @@ export default function BlogSection() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('./data/blog-posts.json')
+    fetch('/data/blog-posts.json')
       .then((res) => res.json())
       .then((data) => setPosts(data.slice(0, 3)))
       .catch((err) => console.error('Error loading blog posts:', err));
@@ -74,11 +74,11 @@ export default function BlogSection() {
                     {/* Post Meta Info */}
                     <div className="flex flex-wrap items-center gap-4 mb-4 text-xs sm:text-sm text-gray-400">
                       <div className="flex items-center gap-1">
-                        <img src="./assets/icons/calendar.svg" alt="calendar" className="w-4 h-4" />
+                        <img src="/assets/icons/calendar.svg" alt="calendar" className="w-4 h-4" />
                         <span>{post.date}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <img src="./assets/icons/clock.svg" alt="clock" className="w-4 h-4" />
+                        <img src="/assets/icons/clock.svg" alt="clock" className="w-4 h-4" />
                         <span>{post.readTime} min read</span>
                       </div>
                     </div>

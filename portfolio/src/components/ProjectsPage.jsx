@@ -8,7 +8,7 @@ export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
-    fetch('./data/projects.json')
+    fetch('/data/projects.json')
       .then((res) => res.json())
       .then((data) => setProjects(data))
       .catch((err) => console.error('Error loading projects:', err));
@@ -174,7 +174,7 @@ export default function ProjectsPage() {
                               title="View Website"
                             >
                               <img
-                                src="./assets/icons/web.svg"
+                                src="/assets/icons/web.svg"
                                 alt="Website"
                                 className="w-6 h-6 brightness-0"
                               />
@@ -187,7 +187,7 @@ export default function ProjectsPage() {
                               title="View Source"
                             >
                               <img
-                                src="./assets/icons/external-link.svg"
+                                src="/assets/icons/external-link.svg"
                                 alt="Source"
                                 className="w-5 h-5 brightness-0"
                               />

@@ -160,7 +160,7 @@ export default function ContactPage() {
                       className="w-10 h-10 rounded-xl bg-blue-500/60 flex items-center justify-center shrink-0"
                     >
                       <img
-                        src="./assets/icons/email.svg"
+                        src="/assets/icons/email.svg"
                         alt="Email"
                         width="18"
                         height="18"
@@ -187,7 +187,7 @@ export default function ContactPage() {
                       className="w-10 h-10 rounded-xl bg-yellow-500/60 flex items-center justify-center shrink-0"
                     >
                       <img
-                        src="./assets/icons/location.svg"
+                        src="/assets/icons/location.svg"
                         alt="Location"
                         width="20"
                         height="20"
@@ -211,7 +211,7 @@ export default function ContactPage() {
                       className="w-10 h-10 rounded-xl bg-green-500/60 flex items-center justify-center shrink-0"
                     >
                       <img
-                        src="./assets/icons/availability.svg"
+                        src="/assets/icons/availability.svg"
                         alt="Availability"
                         width="18"
                         height="18"

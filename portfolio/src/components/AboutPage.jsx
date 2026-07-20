@@ -2,7 +2,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 const LIFE_IMAGES = [
-  { src: './assets/images/life-1.jpg', alt: 'Life moment 1' },
+  { src: '/assets/images/life-1.jpg', alt: 'Life moment 1' },
   { src: './assets/images/life-2.jpg', alt: 'Life moment 2' },
   { src: './assets/images/life-3.jpg', alt: 'Life moment 3' },
   { src: './assets/images/life-4.jpeg', alt: 'Life moment 4' },
@@ -76,7 +76,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start">
                 <div className="relative w-full max-w-md aspect-square rounded-2xl border-2 border-white/10 bg-linear-to-br from-blue-500/10 to-purple-500/10 overflow-hidden mb-6">
                   <img
-                    src="./assets/images/hero-picture.jpeg"
+                    src="/assets/images/hero-picture.jpeg"
                     alt="Sabriel Adriel"
                     className="w-full h-full object-cover"
                   />
@@ -200,7 +200,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-center md:items-end">
                 <div className="relative w-full max-w-md aspect-square rounded-2xl border-2 border-white/10 bg-linear-to-br from-blue-500/10 to-purple-500/10 overflow-hidden">
                   <img
-                    src="./assets/images/kid-me.jpg"
+                    src="/assets/images/kid-me.jpg"
                     alt="Young Sabriel Adriel"
                     className="w-full h-full object-cover"
                   />

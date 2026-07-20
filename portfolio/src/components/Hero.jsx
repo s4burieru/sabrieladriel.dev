@@ -85,7 +85,7 @@ export default function Hero() {
               className="hero-cta-no-hover w-full sm:w-40 px-3 sm:px-5 h-10 sm:h-14 border border-white/10 text-white rounded-full backdrop-blur-lg bg-white/10 shadow-sm flex items-center justify-center text-xs sm:text-base gap-2"
             >
               <img
-                src="./assets/social-icons/Envelope-Alt--Streamline-Unicons.svg"
+                src="/assets/social-icons/Envelope-Alt--Streamline-Unicons.svg"
                 alt="Email"
                 className="w-3.5 sm:w-4 h-3.5 sm:h-4"
               />
@@ -96,7 +96,7 @@ export default function Hero() {
               className="hero-cta-no-hover w-full sm:w-52 px-3 sm:px-6 h-10 sm:h-14 bg-white text-black rounded-full flex items-center justify-center text-xs sm:text-base gap-2"
             >
               <img
-                src="./assets/social-icons/Bag-Alt--Streamline-Unicons.svg"
+                src="/assets/social-icons/Bag-Alt--Streamline-Unicons.svg"
                 alt="Projects"
                 className="w-3.5 sm:w-4 h-3.5 sm:h-4 brightness-0"
               />
@@ -110,12 +110,12 @@ export default function Hero() {
           <div className="relative">
             <div className="relative w-28 sm:w-40 md:w-48 h-28 sm:h-40 md:h-48 rounded-full border-4 border-white overflow-hidden bg-gray-800 flex items-center justify-center group cursor-pointer">
               <img
-                src="./assets/images/hero-picture.jpeg"
+                src="/assets/images/hero-picture.jpeg"
                 alt="Sabriel Adriel"
                 className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
               />
               <img
-                src="./assets/images/my-picture-2.png"
+                src="/assets/images/my-picture-2.png"
                 alt="Sabriel Adriel"
                 className="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
@@ -130,7 +130,7 @@ export default function Hero() {
               title="GitHub"
             >
               <img
-                src="./assets/social-icons/Github--Streamline-Feather.svg"
+                src="/assets/social-icons/Github--Streamline-Feather.svg"
                 alt="GitHub"
                 className="w-3.5 sm:w-5 h-3.5 sm:h-5"
               />
@@ -141,7 +141,7 @@ export default function Hero() {
               title="LinkedIn"
             >
               <img
-                src="./assets/social-icons/Linkedin--Streamline-Feather.svg"
+                src="/assets/social-icons/Linkedin--Streamline-Feather.svg"
                 alt="LinkedIn"
                 className="w-3.5 sm:w-5 h-3.5 sm:h-5"
               />
@@ -152,7 +152,7 @@ export default function Hero() {
               title="Behance"
             >
               <img
-                src="./assets/social-icons/Behance-Tag--Streamline-Iconoir.svg"
+                src="/assets/social-icons/Behance-Tag--Streamline-Iconoir.svg"
                 alt="Behance"
                 className="w-3.5 sm:w-5 h-3.5 sm:h-5"
               />
@@ -163,7 +163,7 @@ export default function Hero() {
               title="Medium"
             >
               <img
-                src="./assets/social-icons/Medium--Streamline-Iconoir.svg"
+                src="/assets/social-icons/Medium--Streamline-Iconoir.svg"
                 alt="Medium"
                 className="w-3.5 sm:w-5 h-3.5 sm:h-5"
               />
@@ -174,7 +174,7 @@ export default function Hero() {
               title="Instagram"
             >
               <img
-                src="./assets/social-icons/Instagram--Streamline-Feather.svg"
+                src="/assets/social-icons/Instagram--Streamline-Feather.svg"
                 alt="Instagram"
                 className="w-3.5 sm:w-5 h-3.5 sm:h-5"
               />
