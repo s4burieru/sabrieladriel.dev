@@ -16,7 +16,7 @@ const PAGE_MAP = {
 };
 
 // Pages that are standalone React apps (separate entry points) - need full page navigation
-const REACT_APP_PAGES = ['/about', '/projects', '/services', '/blog'];
+const REACT_APP_PAGES = ['/about', '/projects', '/services', '/blog', '/contact'];
 
 // Get the base path for the site (works with GitHub Pages subdirectory)
 function getBasePath() {
@@ -172,9 +172,20 @@ async function navigateTo(url, pushState = true) {
   const cleanPath = urlObj.pathname;
   const queryString = urlObj.search;
   
-  // For standalone React app pages, do a full page navigation
-  if (REACT_APP_PAGES.includes(cleanPath)) {
-    window.location.href = url;
+  // For React app pages, let React handle the navigation
+  if (REACT_APP_PAGES.includes(cleanPath) || cleanPath === '/blog') {
+    // Update the URL
+    if (pushState) {
+      const newUrl = cleanPath + queryString;
+      history.pushState({ path: newUrl }, '', newUrl);
+    }
+    
+    // Trigger React to re-render by dispatching a custom event
+    // React will pick up the new URL from window.location
+    window.dispatchEvent(new CustomEvent('react-route-change'));
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
     return;
   }
   

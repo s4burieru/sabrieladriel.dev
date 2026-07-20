@@ -37,7 +37,7 @@ export default defineConfig({
           const files = readdirSync(assetsDir);
           const bundleFile = files.find(f => f.startsWith('react-components-') && f.endsWith('.js'));
           if (bundleFile) {
-            reactBundlePath = './assets/' + bundleFile;
+            reactBundlePath = '/assets/' + bundleFile;
             console.log(`  ✓ Found React bundle: ${bundleFile}`);
           }
         }
