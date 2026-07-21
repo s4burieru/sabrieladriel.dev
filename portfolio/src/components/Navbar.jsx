@@ -11,6 +11,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   const handleScroll = useCallback(() => {
     if (window.innerWidth >= 1024) {
@@ -35,6 +36,22 @@ export default function Navbar() {
     return () => document.removeEventListener('page-loaded', handleRoute);
   }, []);
 
+  // Track current path for active link styling
+  useEffect(() => {
+    const updatePath = () => setCurrentPath(window.location.pathname);
+    
+    // Listen for custom route change event
+    window.addEventListener('react-route-change', updatePath);
+    
+    // Also listen for popstate (browser back/forward)
+    window.addEventListener('popstate', updatePath);
+    
+    return () => {
+      window.removeEventListener('react-route-change', updatePath);
+      window.removeEventListener('popstate', updatePath);
+    };
+  }, []);
+
   const navbarStyle = {
     maxWidth: scrolled ? '50rem' : '1350px',
     padding: scrolled ? '0.5rem 1.5rem' : '0.625rem 2rem',
@@ -51,25 +68,33 @@ export default function Navbar() {
       <div className="flex items-center justify-between gap-8">
         {/* Left Section: Logo/Home */}
         <div className="shrink-0">
-          <a
-            href="/"
-            className="font-poppins font-bold text-lg text-white hover:text-blue-600 transition-colors duration-200 flex items-center gap-2"
-          >
-            <span className="text-2xl">SA</span>
+          <a href="/" className="flex items-center">
+            <img
+              src="/assets/logo.png"
+              alt="Portfolio Logo"
+              className="h-10 w-auto"
+            />
           </a>
         </div>
 
         {/* Middle Section: Navigation Links */}
-        <div className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
-            >
-              {link.label}
-            </a>
-          ))}
+        <div className="hidden lg:flex items-center gap-2">
+          {NAV_LINKS.map((link) => {
+            const isActive = currentPath === link.href;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`font-poppins text-sm font-medium px-3 py-1.5 rounded-xl transition-all duration-200 ${
+                  isActive
+                    ? 'bg-white text-black'
+                    : 'text-white/80 hover:text-black hover:bg-white'
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
 
         {/* Right Section: Resume, Theme Toggle */}
@@ -131,15 +156,22 @@ export default function Navbar() {
         } fixed top-24 left-4 right-4 z-40 backdrop-blur-lg rounded-2xl border border-white/20 p-4 lg:hidden bg-black/90`}
       >
         <div className="flex flex-col gap-3">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="font-poppins text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 py-2"
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = currentPath === link.href;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`font-poppins text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 ${
+                  isActive
+                    ? 'bg-white text-black'
+                    : 'text-white/80 hover:text-white hover:bg-black/80'
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
           <a
             href="./assets/sabriel-adriel-san-agustin-cv.pdf"
             className="font-poppins text-sm font-semibold px-4 py-2 rounded-full bg-white text-black hover:bg-blue-50 transition-colors duration-200 text-center"
