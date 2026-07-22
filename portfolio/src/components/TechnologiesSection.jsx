@@ -4,6 +4,7 @@ const techItems = [
   { name: 'JavaScript', icon: '/assets/tech-icons/javascript.svg', w: 'w-9', h: 'h-9', rounded: true },
   { name: 'Tailwind', icon: '/assets/tech-icons/tailwind.svg', w: 'w-10', h: 'h-10' },
   { name: 'React', icon: '/assets/tech-icons/react.svg', w: 'w-8', h: 'h-8' },
+  { name: 'Vercel', icon: '/assets/tech-icons/vercel.svg', w: 'w-8', h: 'h-8' },
   { name: 'VB.NET', icon: '/assets/tech-icons/VB.NET.svg', w: 'w-9', h: 'h-9' },
   { name: 'Java', icon: '/assets/tech-icons/java.svg', w: 'w-10', h: 'h-10' },
   { name: 'VS Code', icon: '/assets/tech-icons/visual-studio-code.svg', w: 'w-8', h: 'h-8' },

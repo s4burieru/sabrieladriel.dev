@@ -1760,6 +1760,11 @@
       --tw-ring-color: var(--color-blue-400);
     }
   }
+  .focus\:ring-white {
+    &:focus {
+      --tw-ring-color: var(--color-white);
+    }
+  }
   .focus\:ring-offset-0 {
     &:focus {
       --tw-ring-offset-width: 0px;

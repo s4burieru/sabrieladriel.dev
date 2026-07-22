@@ -1,11 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from "react";
 
 const NAV_LINKS = [
-  { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/services', label: 'Services' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/services", label: "Services" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -22,41 +22,41 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', () => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", () => {
       if (window.innerWidth < 1024) setScrolled(false);
     });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
   // Close mobile menu on route change
   useEffect(() => {
     const handleRoute = () => setMobileOpen(false);
-    document.addEventListener('page-loaded', handleRoute);
-    return () => document.removeEventListener('page-loaded', handleRoute);
+    document.addEventListener("page-loaded", handleRoute);
+    return () => document.removeEventListener("page-loaded", handleRoute);
   }, []);
 
   // Track current path for active link styling
   useEffect(() => {
     const updatePath = () => setCurrentPath(window.location.pathname);
-    
+
     // Listen for custom route change event
-    window.addEventListener('react-route-change', updatePath);
-    
+    window.addEventListener("react-route-change", updatePath);
+
     // Also listen for popstate (browser back/forward)
-    window.addEventListener('popstate', updatePath);
-    
+    window.addEventListener("popstate", updatePath);
+
     return () => {
-      window.removeEventListener('react-route-change', updatePath);
-      window.removeEventListener('popstate', updatePath);
+      window.removeEventListener("react-route-change", updatePath);
+      window.removeEventListener("popstate", updatePath);
     };
   }, []);
 
   const navbarStyle = {
-    maxWidth: scrolled ? '50rem' : '1350px',
-    padding: scrolled ? '0.5rem 1.5rem' : '0.625rem 2rem',
-    top: scrolled ? '1.8rem' : '1.5rem',
-    transition: 'all 0.3s ease',
+    maxWidth: scrolled ? "50rem" : "1350px",
+    padding: scrolled ? "0.5rem 1.5rem" : "0.625rem 2rem",
+    top: scrolled ? "1.8rem" : "1.5rem",
+    transition: "all 0.3s ease",
   };
 
   return (
@@ -87,8 +87,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`font-poppins text-sm font-medium px-3 py-1.5 rounded-xl transition-all duration-200 ${
                   isActive
-                    ? 'bg-white text-black'
-                    : 'text-white/80 hover:text-black hover:bg-white'
+                    ? "bg-white text-black"
+                    : "text-white/80 hover:text-black hover:bg-white"
                 }`}
               >
                 {link.label}
@@ -109,7 +109,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             id="mobile-menu-btn"
-            className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-0"
+            className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-0"
             aria-label="Toggle mobile menu"
             onClick={() => setMobileOpen((prev) => !prev)}
           >
@@ -152,7 +152,7 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         className={`${
-          mobileOpen ? '' : 'hidden'
+          mobileOpen ? "" : "hidden"
         } fixed top-24 left-4 right-4 z-40 backdrop-blur-lg rounded-2xl border border-white/20 p-4 lg:hidden bg-black/90`}
       >
         <div className="flex flex-col gap-3">
@@ -164,8 +164,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`font-poppins text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 ${
                   isActive
-                    ? 'bg-white text-black'
-                    : 'text-white/80 hover:text-white hover:bg-black/80'
+                    ? "bg-white text-black"
+                    : "text-white/80 hover:text-white hover:bg-black/80"
                 }`}
               >
                 {link.label}
