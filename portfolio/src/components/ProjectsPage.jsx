@@ -246,8 +246,8 @@ export default function ProjectsPage() {
                         {/* Project Info */}
                         <div className="flex-1 flex flex-col p-4 sm:p-6 md:p-7">
                           <h3
-                            className={`text-lg sm:text-xl font-bold transition text-white group-hover:text-blue-600 ${
-                              isTouched ? 'text-blue-600' : ''
+                            className={`text-lg sm:text-xl font-bold transition mb-2 sm:mb-3 ${
+                              isTouched ? 'text-blue-700' : 'text-white group-hover:text-blue-700'
                             }`}
                           >
                             {project.title}
